@@ -1,14 +1,14 @@
 # World-living-quality-analysis
 
-Title:
+### Title:
 World-living-quality-analysis
 
-Hypotheses: 
+### Hypotheses: 
 Living quality will depends on BLAHHHHHHHHHHHHHHHHHHHH!!!!!!!!!!!!
 
 We will pick a few of the best datasets from below.
 
-Datasets:	
+### Datasets:	
 - World Happiness Report [https://www.kaggle.com/unsdsn/world-happiness]
 - The Human Freedom Index [https://www.kaggle.com/gsutters/the-human-freedom-index]
 - Financial Times Market Data [https://markets.ft.com/data/]
@@ -20,4 +20,5 @@ Datasets:
 
 	- Suicide Rates Overview 1985 to 2016 [https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016]
 
-Git: https://github.com/winwowin/World-living-quality-analysis
+### Git: 
+https://github.com/winwowin/World-living-quality-analysis
