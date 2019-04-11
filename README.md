@@ -4,10 +4,9 @@
 World-living-quality-analysis
 
 ### Team members:
-Worawich (Win) Chaiyakunapruk
-
-Phil Zhe Wang
-Yao Xiao
+Worawich (Win) Chaiyakunapruk 
+Phil Zhe Wang 
+Yao Xiao 
 
 ### Summary: 
 Living quality will depends on many factors from people emotions to their financial health. We have decided to pick important data from each category, e.g. Each from happiness indicator, economic, and crime rate in each area of the world.
