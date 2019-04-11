@@ -4,9 +4,9 @@
 World-living-quality-analysis
 
 ### Team members:
-Worawich (Win) Chaiyakunapruk 
-Phil Zhe Wang 
-Yao Xiao 
+Worawich (Win) Chaiyakunapruk,
+Phil Zhe Wang, 
+Yao Xiao,  
 
 ### Summary: 
 Living quality will depends on many factors from people emotions to their financial health. We have decided to pick important data from each category, e.g. Each from happiness indicator, economic, and crime rate in each area of the world.
@@ -14,10 +14,8 @@ Living quality will depends on many factors from people emotions to their financ
 We will pick a few of the best datasets from below.
 
 ### Hypotheses: 
-1. People will be happier with higher education.
-2. People will be happier with lower crime rate.
-3. People will be happier with better economic.
-4. People will be happier with the lower suicide rate.
+1. People will be happier with higher education which will be indipendent from other factors.
+2. The worsen the economic will resulted in higher crime rate, higher suicide rate, and less happiness
 
 ### Datasets:	
 - World Happiness Report [https://www.kaggle.com/unsdsn/world-happiness]
