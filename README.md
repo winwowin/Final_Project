@@ -28,6 +28,7 @@ We will pick a few of the best datasets from below.
 - World Integrated Trade Solution Trade Stats [https://datacatalog.worldbank.org/dataset/world-integrated-trade-solution-trade-stats]
 - Economic Fitness [https://datacatalog.worldbank.org/dataset/economic-fitness]
 - Suicide Rates Overview 1985 to 2016 [https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016]
+- World Bank: Education Data [https://www.kaggle.com/theworldbank/world-bank-intl-education]
 
 ### Git: 
 https://github.com/winwowin/World-living-quality-analysis
