@@ -15,7 +15,7 @@ We will pick a few of the best datasets from below.
 
 ### Hypotheses: 
 1. People will be happier with higher education which will be indipendent from other factors.
-2. The worsen the economic will resulted in higher crime rate, higher suicide rate, and less happiness
+2. The worsen of the economy will result in higher crime rate, higher suicide rate, and less happiness
 3. Look into the sense of happiness dataset, we can see there are many metrics measuring the sense of happiness. For each metric, we would analyze what factors affects it at a relatively high rate and what factors affect all the metrics relatively equally.
 
 ### Datasets:	
