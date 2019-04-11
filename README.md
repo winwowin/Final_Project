@@ -21,7 +21,6 @@ We will pick a few of the best datasets from below.
 ### Datasets:	
 - World Happiness Report [https://www.kaggle.com/unsdsn/world-happiness]
 - The Human Freedom Index [https://www.kaggle.com/gsutters/the-human-freedom-index]
-- Financial Times Market Data [https://markets.ft.com/data/]
 - UNODC Global Criminal Justice Statistics [https://data.world/unodc/b4aa5785-7a33-4c07-af15-0f15d95a121f] I already registered and download this one.
 - Poverty And Equity Database [https://datacatalog.worldbank.org/dataset/poverty-and-equity-database]
 - IBRD Statement Of Loans - Historical Data [https://finances.worldbank.org/Loans-and-Credits/IBRD-Statement-Of-Loans-Historical-Data/zucq-nrc3]
