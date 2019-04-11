@@ -3,10 +3,21 @@
 ### Title:
 World-living-quality-analysis
 
-### Hypotheses: 
-Living quality will depends on many factors. We have decided to pick important data from each category, e.g. Each from happiness indicator, economic, and crime rate in each area of the world.
+### Team members:
+Worawich (Win) Chaiyakunapruk
+Phil Zhe Wang
+Yao Xiao
+
+### Summary: 
+Living quality will depends on many factors from people emotions to their financial health. We have decided to pick important data from each category, e.g. Each from happiness indicator, economic, and crime rate in each area of the world.
 
 We will pick a few of the best datasets from below.
+
+### Hypotheses: 
+1. People will be happier with higher education.
+2. People will be happier with lower crime rate.
+3. People will be happier with better economic.
+4. People will be happier with the lower suicide rate.
 
 ### Datasets:	
 - World Happiness Report [https://www.kaggle.com/unsdsn/world-happiness]
