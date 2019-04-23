@@ -18,9 +18,9 @@ Maslow used to be a great psychologist, but our slogan is:
 Make Maslow Great Again! (or not, if possible, because in that situation is most likely to publish a paper)
 
 ### Hypotheses: 
-1. People will be happier with higher education which will be indipendent from other factors.
-2. The worsen of the economy will result in higher crime rate, higher suicide rate, and less happiness
-3. Look into the sense of happiness dataset, we can see there are many metrics measuring the sense of happiness. For each metric, we would analyze what factors affects it at a relatively high rate and what factors affect all the metrics relatively equally.
+1. Maslow's theory is right in all!
+2. Maslow's theory is right to some extent!
+3. Maslow's theory has a scope: it works for developing contries but not developed contries!
 
 ### Datasets:	
 - World Happiness Report [https://www.kaggle.com/unsdsn/world-happiness]
@@ -34,11 +34,11 @@ Make Maslow Great Again! (or not, if possible, because in that situation is most
 - World Bank: Education Data [https://www.kaggle.com/theworldbank/world-bank-intl-education]
 
 ### Mapping
-Physiological ——> Hunger/living data
-Safety ——> Criminal data
-Love/belonging ——> Marriage/Children/Family data
-Esteem ——> Position/Class data
-Self-actualization ——> Job satisfaction/Happiness data
+- Physiological ——> Hunger/living data
+- Safety ——> Criminal data
+- Love/belonging ——> Marriage/Children/Family data
+- Esteem ——> Position/Class data
+- Self-actualization ——> Job satisfaction/Happiness data
 
 ### Git: 
 https://github.com/winwowin/World-living-quality-analysis
