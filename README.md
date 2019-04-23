@@ -1,7 +1,8 @@
 # World-living-quality-analysis
 
 ### Title:
-World-living-quality-analysis
+Make Maslow Great Again ...or not
+——A Statistical Methodology/Model/Proof/Falsification of Maslow's Pyramid
 
 ### Team members:
 Worawich (Win) Chaiyakunapruk,
@@ -9,9 +10,12 @@ Phil Zhe Wang,
 Yao Xiao,  
 
 ### Summary: 
-Living quality will depends on many factors from people emotions to their financial health. We have decided to pick important data from each category, e.g. Each from happiness indicator, economic, and crime rate in each area of the world.
-
-We will pick a few of the best datasets from below.
+Maslow's hierarchy of needs, or the so-called Maslow pyramid, is a famous theory when we talk about human being's self-satisfaction. Raised in 1943, the book A Theory of Human Motivation, it describes people's psychological motivation in different developing periods.
+However famous, the doubts it received has never been reduced. You will get over 20000 results in google scholar after typing in keywords like "Maslow's hierarchy of needs criticism".
+But most of the criticisms are built from the point of Psychology, which makes them not that strong on my opinion.
+This time, we will build the hierarchy model with real data, and try to prove if he is right or wrong.
+Maslow used to be a great psychologist, but our slogan is:
+Make Maslow Great Again! (or not, if possible, because in that situation is most likely to publish a paper)
 
 ### Hypotheses: 
 1. People will be happier with higher education which will be indipendent from other factors.
@@ -28,6 +32,13 @@ We will pick a few of the best datasets from below.
 - Economic Fitness [https://datacatalog.worldbank.org/dataset/economic-fitness]
 - Suicide Rates Overview 1985 to 2016 [https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016]
 - World Bank: Education Data [https://www.kaggle.com/theworldbank/world-bank-intl-education]
+
+### Mapping
+Physiological ——> Hunger/living data
+Safety ——> Criminal data
+Love/belonging ——> Marriage/Children/Family data
+Esteem ——> Position/Class data
+Self-actualization ——> Job satisfaction/Happiness data
 
 ### Git: 
 https://github.com/winwowin/World-living-quality-analysis
