@@ -355,7 +355,7 @@ x_list, y_list = Analysis_first_two_level(hunger, peace)
 plot(x_list, y_list)
 
 
-# In[32]:
+# In[63]:
 
 
 get_ipython().run_line_magic('matplotlib', 'inline')
@@ -367,14 +367,14 @@ def plot_cat(x_list, y_list):
                   ['undernourishment_rate_2014','pi_2014'],['undernourishment_rate_2015','pi_2015'],
                   ['undernourishment_rate_2016','pi_2016']]
     x_item = ['[0,5)','[5,10)','[10,15)','[15,20)','[20,25)','[25,30)','[30,35)','[35,40)','[40,45)',
-             '[45,50)','[50+']
+             '[45,50)']#,'[50+']
     marker = ['.','*','>','<','1','2','s']
     color = ['#E11B00', '#1E90FF','#FF4233','#FFE333','#7EFF33','#33F4FF','#D433FF']
     y_new_list = []
     for a in range(len(x_list)):
         cc = x_list[a]
         cy = y_list[a]
-        y_item = np.zeros((11,2))
+        y_item = np.zeros((10,2))
         for b in range(len(cc)):
             if cc[b] >= 0 and cc[b]<5:
                 y_item[0][0] += cy[b]
@@ -406,18 +406,21 @@ def plot_cat(x_list, y_list):
             if cc[b] >= 45 and cc[b]<50:
                 y_item[9][0] += cy[b]
                 y_item[9][1] += 1
-            if cc[b] >= 50:
-                y_item[10][0] += cy[b]
-                y_item[10][1] += 1
+#             if cc[b] >= 50:
+#                 y_item[10][0] += cy[b]
+#                 y_item[10][1] += 1
         y_new = np.zeros(y_item.shape[0])
         for c in range(y_item.shape[0]):
-            y_new[c] = y_item[c][0]/y_item[c][1]
+            if y_item[c][1] == 0:
+                y_new[c] = math.nan
+            else:
+                y_new[c] = y_item[c][0]/y_item[c][1]
         y_new_list.append(y_new)
     for s in range(len(y_new_list)):
         plt.plot(x_item,y_new_list[s],label = 'data of year '+item[s][1][-4:], marker = marker[s],color = color[s])
     plt.xlabel('undernourishment rate')
     plt.ylabel('Peacefulness Index')
-    plt.ylim(1.5,3.5)
+    plt.ylim(1.6,2.8)
     plt.xticks(fontsize = 8, horizontalalignment = 'center', alpha = .7)
     plt.yticks(fontsize = 12, alpha = .7)
     plt.grid(axis='both',alpha = .3)
@@ -427,7 +430,7 @@ def plot_cat(x_list, y_list):
     plt.show()
 
 
-# In[33]:
+# In[64]:
 
 
 plot_cat(x_list, y_list)
@@ -435,6 +438,96 @@ plot_cat(x_list, y_list)
 
 # ## Part 2: Analysis of level 2-3, Safety-Belonging 
 # 
+
+# In[67]:
+
+
+def marital():
+    file_path = "590PR_final_datasets"
+    file_name = "UNdata_MARITAL_STATUS_2010-2013.csv"
+    df = pd.read_csv(file_path + '/' + file_name)
+    df.drop(df.tail(74).index,inplace=True)
+    
+    #     df.dropna(inplace=True)
+
+    file_name = "UNdata_MARITAL_STATUS_2014-2017.csv"
+    df2 = pd.read_csv(file_path + '/' + file_name)
+    df2.drop(df2.tail(54).index,inplace=True)
+
+    df_all = pd.concat([df, df2], axis= 0).reset_index(drop=True)
+    return df_all
+
+
+# In[68]:
+
+
+married = marital()
+married = married.astype({"Year": int}, copy = False)
+# married['Year'].astype('category').values.categories
+married[married['Marital status']=='Total']
+
+
+# In[69]:
+
+
+married['Year'].astype('category').values.categories
+
+
+# In[70]:
+
+
+married.astype({"Year": int})
+
+
+# In[71]:
+
+
+m2 = married.loc[(married['Marital status']=='Total') & (married['Age']=='Total')]
+
+m2[m2['Year'] == 2013].groupby(['Country or Area']).sum()
+
+
+# In[104]:
+
+
+married = marital()
+married = married.astype({"Year": int}, copy = False)
+
+# percent_married = pd.DataFrame()
+percent_married = []
+for i in range(8):
+    total = married.loc[(married['Marital status']=='Total') & (married['Age']=='Total')].groupby(['Year', 'Country or Area'], as_index=False).sum()
+    single = married.loc[(married['Marital status']=='Single (never married)') & (married['Age']=='Total')].groupby(['Year', 'Country or Area'], as_index=False).sum()
+    single_pop = single[single['Year'] == 2010+i].groupby(['Year', 'Country or Area']).sum()['Value']
+    total_pop = total[total['Year'] == 2010+i].groupby(['Year', 'Country or Area']).sum()['Value']
+    percent_married.append(((total_pop-single_pop)/total_pop))
+percent_married[0].to_frame().reset_index()
+
+
+# In[93]:
+
+
+percent_married
+
+
+# In[96]:
+
+
+married_pop = married.loc[(married['Marital status']=='Married') & (married['Age']=='Total')].groupby(['Year', 'Country or Area'], as_index=False, axis = 0).sum()
+married_pop[(married_pop)['Year'] == 2014]
+
+
+# In[97]:
+
+
+(married_pop/total_pop).to_frame()
+
+
+# In[102]:
+
+
+single_pop.to_frame().reset_index()
+
 
 # In[38]:
 
@@ -472,7 +565,7 @@ def population():
 population()
 
 
-# In[493]:
+# In[67]:
 
 
 def marital():
@@ -491,7 +584,7 @@ def marital():
     return df_all
 
 
-# In[676]:
+# In[68]:
 
 
 married = marital()
@@ -500,19 +593,19 @@ married = married.astype({"Year": int}, copy = False)
 married[married['Marital status']=='Total']
 
 
-# In[669]:
+# In[69]:
 
 
 married['Year'].astype('category').values.categories
 
 
-# In[655]:
+# In[70]:
 
 
 married.astype({"Year": int})
 
 
-# In[541]:
+# In[71]:
 
 
 m2 = married.loc[(married['Marital status']=='Total') & (married['Age']=='Total')]
@@ -520,7 +613,7 @@ m2 = married.loc[(married['Marital status']=='Total') & (married['Age']=='Total'
 m2[m2['Year'] == 2013].groupby(['Country or Area']).sum()
 
 
-# In[683]:
+# In[104]:
 
 
 married = marital()
@@ -534,36 +627,77 @@ for i in range(8):
     single_pop = single[single['Year'] == 2010+i].groupby(['Year', 'Country or Area']).sum()['Value']
     total_pop = total[total['Year'] == 2010+i].groupby(['Year', 'Country or Area']).sum()['Value']
     percent_married.append(((total_pop-single_pop)/total_pop))
+percent_married[0].to_frame().reset_index()
+
+
+# In[93]:
+
+
 percent_married
 
 
-# In[ ]:
+# In[128]:
 
 
-percent_married
+level2_list = []
+for i in range(2010, 2018):
+    df = df_marriage_rate[df_marriage_rate['Year']==i]
+    string = 'pi_'+str(i)
+    p1 = peace['Country']
+    p2 = peace[string]   
+    p = pd.concat([p1, p2],axis = 1)
+    df_level2 = pd.merge(df, p, on = 'Country', how='inner')
+    level2_list.append(df_level2)
 
 
-# In[665]:
+# ## Part 3: Analysis of level 3-4, Belonging-Esteem 
+# by married and freedom dataset
+
+# ## Part 4: Analysis of level 4-5, Esteem-Self Actualization 
+# by freedom and innovation dataset
+
+# In[169]:
 
 
-married_pop = married.loc[(married['Marital status']=='Married') & (married['Age']=='Total')].groupby(['Year', 'Country or Area'], as_index=False, axis = 0).sum()
-married_pop[(married_pop)['Year'] == 2014]
+def Innovation( sheet = None):
+    import zipfile
+    file_path = "590PR_final_datasets"
+    file_name = "Innovation.zip"
+    zf = zipfile.ZipFile(file_path + '/' + file_name) 
+    df = []
+    inv = {}
+    for name in zipfile.ZipFile.infolist(zf):
+#             logging.debug(name.filename)
+        inv[name.filename] = pd.read_csv(zf.open(name.filename))
+#         logging.debug((df))
+    if not sheet == None:
+        return inv[sheet]
+    else:
+        return inv
+Innovation('Innovation-2015.csv')
 
 
-# In[574]:
+# In[168]:
 
 
-(married_pop/total_pop).to_frame()
+# for i in range(6):
+#     Innovation('Innovation-201%s.csv' %(i+3))['Year'] = '201%s' %(i+3)
 
 
-# In[560]:
+# df = Innovation('Innovation-201%s.csv' %(3))
+# df.rename({'Economy':'Country','Score': 'Score201%s' %(3)}, axis='columns', inplace=True)
+# df2 = df[['Country','Score201%s' %(3)]]
+for i in range(6):
+    df = Innovation('Innovation-201%s.csv' %(i+3))
+    df.rename({'Economy':'Country','Score': 'Score201%s' %(i+3)}, axis='columns', inplace=True)
+    print(df[['Country','Score201%s' %(i+3)]])
 
 
-single_pop
+# ## Part 5: Analysis of level 2-4, Safety-Esteem 
+# by peace + freedom index dataset
+
+# In[133]:
 
 
-# In[563]:
-
-
-married[married['Country or Area'] == 'Georgia']
+GET_DATA.Peace(None)
 
