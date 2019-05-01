@@ -1,5 +1,5 @@
 # World-living-quality-analysis
-
+# Proposal
 ### Title:
 Make Maslow Great Again ...or not
 ——A Statistical Methodology/Model/Proof/Falsification of Maslow's Pyramid
@@ -40,5 +40,46 @@ Make Maslow Great Again! (or not, if possible, because in that situation is most
 - Esteem ——> Position/Class data
 - Self-actualization ——> Job satisfaction/Happiness data
 
-### Git: 
-https://github.com/winwowin/World-living-quality-analysis
+# Final Report
+## Introduction
+Maslow’s hierarchy of needs is a theory in psychology proposed by Abraham Maslow in his 1943 paper "A Theory of Human Motivation" in Psychological Review. 
+Maslow's hierarchy of needs is used to study how humans intrinsically partake in behavioral motivation. Maslow used the terms "physiological", "safety", "belonging and love", "social needs" or "esteem", and "self-actualization" to describe the pattern through which human motivations generally move.
+This means that in order for motivation to occur at the next level, each level must be satisfied within the individual themselves.
+Although the criticism never stops, the theory has a widespread influence all over the world.
+## Aims & Hypothesis
+The purpose of our experiment is to validate whether Maslow’s model for the hierarchy of needs makes sense in the real world. In other words, we are exploring if there indeed is a sequence for people to satisfy their needs. For example, do most people really put survival in the first place compared to other needs like respect and freedom.
+We are trying to put real data that can represent one or two factors in his pyramid to simulate the conceptual model. So we have to quantify the needs at all levels and try to find their relations.
+- Maslow’s pyramids do make sense in the real world
+- Maslow’s pyramids have some preconditions to be correct
+## Methodology & Modeling
+The original hierarchy states that a lower level must be completely satisfied and fulfilled before moving onto a higher pursuit. 
+## Abstract Model
+Based on the description of Maslow’s original words, we can extract the information to create a logical model like this:
+- When lower level needs are not satisfied, higher level needs are zero
+- when lower level needs are met, higher level needs start increasing
+- The increasing rate of higher level needs should be larger than the lower level needs because people move onto the next level
+## Dataset Mapping
+In order to quantify the psychological concepts in the pyramid, we have to pick data from the real world to represent each level. Since we did not find an accurate description of what exactly each level means, we have to pick the data according to our own understanding and trying to be objective in this process.
+## Plotting Strategies
+The most difficult part of our project is to draw the plot that can show the relationship between lower levels and higher levels. The ways of processing the data and smoothing the curve matter a lot. Our early attempt to draw the plot failed because it’s too skewed and the dots are too many to see the relationship. So we decided to take the following strategies to improve it:
+- divide the lower level data into 10 categories of the same range
+- calculate the mean value of the higher level data that falls into the same range
+- plot the data, so that we only get 10 dots, which is clear
+## Results
+## Conclusion & Discussion
+As we can see from the results of our experiments, most of the results correspond to the expected deduction from the original theory. However, some are different, and we can make some assumptions about the reasons behind the scene.
+Take the first plot as an example: it reveals the relationship between hunger and safety. When the undernourishment index value is low, the peace index value is low as well. It means as people going far away from hunger, their environment gets safer too. This is the same as part of the theory. However, things get different when people are not able to fulfill their needs for food. In areas where people suffer hunger, the peace index value goes into two opposing extremes: very safe or very dangerous. It shows us two different hells: people in dangerous areas take all risks trying to get food, while people in safe areas are too hungry to commit any crimes. However different, both pathetic. 
+## Future Research
+Split the dataset and try to find some scope of the theory. For example, split the data of developed and deloping countries to see their differences.
+Modify the dataset to make it more suitable for the level it presents. For example, combine the poverty and undernourishment data to represent the first level need.
+Try to do more quantified social science theory analytics with more real-world data.
+## Reference
+1. McLeod, S. (2007). Maslow's hierarchy of needs. Simply psychology, 1.
+2. Kaur, A. (2013). Maslow’s need hierarchy theory: Applications and criticisms. Global Journal of Management and Business Studies, 3(10), 1061-1064.
+3. World Happiness Report [https://www.kaggle.com/unsdsn/world-happiness]
+4. The Human Freedom Index [https://www.kaggle.com/gsutters/the-human-freedom-index] 
+5. Poverty And Equity Database [https://datacatalog.worldbank.org/dataset/poverty-and-equity-database]
+6. Global peace index [http://visionofhumanity.org/indexes/global-peace-index/]
+7. Hunger and Undernourishment, Max Roser and Hannah Ritchie, [https://ourworldindata.org/hunger-and-undernourishment]
+8. Global Innovation Index [https://www.globalinnovationindex.org/analysis-indicator]
+9. population by marital status,  Demographic Statistics Database, [http://data.un.org/Data.aspx?d=POP&f=tableCode%3A23]
