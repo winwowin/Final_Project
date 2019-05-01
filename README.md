@@ -43,7 +43,7 @@ Make Maslow Great Again! (or not, if possible, because in that situation is most
 # Final Report
 ## Introduction
 ![image](https://github.com/winwowin/World-living-quality-analysis/blob/master/images/Pyramid1.PNG)
-Maslow’s hierarchy of needs is a theory in psychology proposed by Abraham Maslow in his 1943 paper "A Theory of Human Motivation" in Psychological Review. 
+<Br/>Maslow’s hierarchy of needs is a theory in psychology proposed by Abraham Maslow in his 1943 paper "A Theory of Human Motivation" in Psychological Review. 
 Maslow's hierarchy of needs is used to study how humans intrinsically partake in behavioral motivation. Maslow used the terms "physiological", "safety", "belonging and love", "social needs" or "esteem", and "self-actualization" to describe the pattern through which human motivations generally move.
 This means that in order for motivation to occur at the next level, each level must be satisfied within the individual themselves.
 Although the criticism never stops, the theory has a widespread influence all over the world.
