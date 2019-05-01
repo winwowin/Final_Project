@@ -1,0 +1,306 @@
+<link rel="stylesheet" type="text/css" media="all" href="http://www.enterprisesurveys.org/app_themes/css/es/master.css" /><link rel="stylesheet" type="text/css" media="all" href="http://www.enterprisesurveys.org/app_themes/css/es/exploreeconomies.css" />
+<div>
+	<table class="TopicInfoTable" cellspacing="0" rules="all" border="1" id="rootcontentcontrol_0_topicdata_0_gvIndicatorData" style="width:100%;border-collapse:collapse;">
+		<thead>
+			<tr class="TableHeader">
+				<th scope="col">Economy</th><th scope="col">Percent of firms using technology licensed from foreign companies*</th><th scope="col">Percent of firms having their own Web site</th><th scope="col">Percent of firms using e-mail to interact with clients/suppliers</th><th scope="col">Percent of firms that introduced a new product/service</th><th scope="col">Percent of firms whose new product/service is also new to the main market</th><th scope="col">Percent of firms that introduced a process innovation</th><th scope="col">Percent of firms that spend on R&D</th>
+			</tr>
+		</thead><tbody>
+			<tr class=" region">
+				<td>All Countries</td><td>14.9</td><td>45.7</td><td>70.3</td><td>35.9</td><td>69.3</td><td>34.1</td><td>14.1</td>
+			</tr><tr class=" region">
+				<td>East Asia &amp; Pacific</td><td>17.6</td><td>37.9</td><td>62.9</td><td>27.0</td><td>72.4</td><td>39.0</td><td>14.2</td>
+			</tr><tr class=" region">
+				<td>Europe &amp; Central Asia</td><td>17.5</td><td>62.2</td><td>84.7</td><td>27.0</td><td>67.1</td><td>22.8</td><td>10.0</td>
+			</tr><tr class=" region">
+				<td>Latin America &amp; Caribbean</td><td>14.6</td><td>60.7</td><td>86.9</td><td>52.9</td><td>72.4</td><td>36.4</td><td>18.0</td>
+			</tr><tr class=" region">
+				<td>Middle East &amp; North Africa</td><td>6.6</td><td>47.2</td><td>64.9</td><td>26.0</td><td>63.7</td><td>30.8</td><td>11.1</td>
+			</tr><tr class=" region">
+				<td>South Asia</td><td>11.4</td><td>31.4</td><td>54.9</td><td>37.8</td><td>66.4</td><td>53.9</td><td>15.7</td>
+			</tr><tr class=" region">
+				<td>Sub-Saharan Africa</td><td>14.7</td><td>30.5</td><td>58.0</td><td>43.2</td><td>71.1</td><td>38.4</td><td>16.9</td>
+			</tr><tr class="TableItem">
+				<td>Afghanistan (2014)</td><td>6.3</td><td>21.8</td><td>64.9</td><td>44.8</td><td>73.6</td><td>65.3</td><td>20.9</td>
+			</tr><tr class="TableItem">
+				<td>Albania (2013)</td><td>17.5</td><td>50.6</td><td>51.5</td><td>8.4</td><td>56.8</td><td>2.9</td><td>0.9</td>
+			</tr><tr class="TableItem">
+				<td>Angola (2010)</td><td>34.7</td><td>28.9</td><td>38.1</td><td class="center">n.a.</td><td class="center">n.a.</td><td class="center">n.a.</td><td class="center">n.a.</td>
+			</tr><tr class="TableItem">
+				<td>Antigua and Barbuda (2010)</td><td>0</td><td>26.3</td><td>87.9</td><td>31.9</td><td>10.4</td><td>2.8</td><td>22.9</td>
+			</tr><tr class="TableItem">
+				<td>Argentina (2017)</td><td>7.5</td><td>69.3</td><td>97.0</td><td>49.6</td><td>68.0</td><td>35.0</td><td>22.6</td>
+			</tr><tr class="TableItem">
+				<td>Armenia (2013)</td><td>23.3</td><td>75.6</td><td>89.4</td><td>12.1</td><td>73.9</td><td>7.8</td><td>3.5</td>
+			</tr><tr class="TableItem">
+				<td>Azerbaijan (2013)</td><td>24.1</td><td>33.0</td><td>64.5</td><td>1.4</td><td>84.5</td><td>12.0</td><td>0</td>
+			</tr><tr class="TableItem">
+				<td>Bahamas, The (2010)</td><td>20.1</td><td>50.1</td><td>89.5</td><td>60.3</td><td>72.0</td><td>28.2</td><td>28.4</td>
+			</tr><tr class="TableItem">
+				<td>Bangladesh (2013)</td><td>16.7</td><td>26.3</td><td>36.6</td><td>31.4</td><td>58.5</td><td>54.2</td><td>17.3</td>
+			</tr><tr class="TableItem">
+				<td>Barbados (2010)</td><td>6.6</td><td>68.2</td><td>100.0</td><td>54.4</td><td>55.2</td><td>28.2</td><td>33.7</td>
+			</tr><tr class="TableItem">
+				<td>Belarus (2013)</td><td>7.0</td><td>66.3</td><td>88.6</td><td>31.5</td><td>67.0</td><td>37.6</td><td>9.2</td>
+			</tr><tr class="TableItem">
+				<td>Belize (2010)</td><td>16.7</td><td>27.7</td><td>85.0</td><td>33.5</td><td>14.2</td><td>5.6</td><td>4.8</td>
+			</tr><tr class="TableItem">
+				<td>Benin (2016)</td><td>2.1</td><td>38.3</td><td>70.2</td><td>34.2</td><td>53.9</td><td>22.6</td><td>14.0</td>
+			</tr><tr class="TableItem">
+				<td>Bhutan (2015)</td><td>14.4</td><td>31.3</td><td>71.4</td><td>44.5</td><td>61.7</td><td>54.3</td><td>7.3</td>
+			</tr><tr class="TableItem">
+				<td>Bolivia (2017)</td><td>36.9</td><td>49.4</td><td>72.9</td><td>60.0</td><td>71.4</td><td>37.1</td><td>15.8</td>
+			</tr><tr class="TableItem">
+				<td>Bosnia and Herzegovina (2013)</td><td>20.6</td><td>63.4</td><td>96.0</td><td>43.9</td><td>76.8</td><td>34.4</td><td>10.6</td>
+			</tr><tr class="TableItem">
+				<td>Botswana (2010)</td><td>17.5</td><td>36.6</td><td>82.5</td><td class="center">n.a.</td><td class="center">n.a.</td><td class="center">n.a.</td><td class="center">n.a.</td>
+			</tr><tr class="TableItem">
+				<td>Brazil (2009)</td><td>9.9</td><td>55.6</td><td>83.6</td><td class="center">n.a.</td><td class="center">n.a.</td><td class="center">n.a.</td><td class="center">n.a.</td>
+			</tr><tr class="TableItem">
+				<td>Bulgaria (2013)</td><td>15.4</td><td>55.1</td><td>88.0</td><td>27.0</td><td>67.6</td><td>16.0</td><td>9.4</td>
+			</tr><tr class="TableItem">
+				<td>Burkina Faso (2009)</td><td>5.9</td><td>17.2</td><td>57.5</td><td class="center">n.a.</td><td class="center">n.a.</td><td class="center">n.a.</td><td class="center">n.a.</td>
+			</tr><tr class="TableItem">
+				<td>Burundi (2014)</td><td>11.7</td><td>25.6</td><td>67.0</td><td>45.1</td><td>78.9</td><td>70.3</td><td>30.9</td>
+			</tr><tr class="TableItem">
+				<td>Cabo Verde (2009)</td><td>27.7</td><td>19.2</td><td>62.8</td><td class="center">n.a.</td><td class="center">n.a.</td><td class="center">n.a.</td><td class="center">n.a.</td>
+			</tr><tr class="TableItem">
+				<td>Cambodia (2016)</td><td>17.5</td><td>24.2</td><td>57.5</td><td>32.4</td><td>81.9</td><td>35.5</td><td>12.3</td>
+			</tr><tr class="TableItem">
+				<td>Cameroon (2016)</td><td>11.9</td><td>22.6</td><td>54.4</td><td>39.6</td><td>66.1</td><td>12.6</td><td>5.7</td>
+			</tr><tr class="TableItem">
+				<td>Central African Republic (2011)</td><td>24.2</td><td>38.1</td><td>56.8</td><td>48.9</td><td>86.0</td><td>64.5</td><td>45.5</td>
+			</tr><tr class="TableItem">
+				<td>Chad (2018)</td><td>18.5</td><td>9.5</td><td>24.9</td><td>36.5</td><td>79.5</td><td>11.3</td><td>12.9</td>
+			</tr><tr class="TableItem">
+				<td>Chile (2010)</td><td>13.1</td><td>78.7</td><td>96.6</td><td>59.9</td><td>56.6</td><td>58.8</td><td>46.1</td>
+			</tr><tr class="TableItem">
+				<td>China (2012)</td><td>18.0</td><td>66.1</td><td>85.0</td><td>43.6</td><td class="center">n.a.</td><td>58.0</td><td>38.7</td>
+			</tr><tr class="TableItem">
+				<td>Colombia (2017)</td><td>7.8</td><td>79.2</td><td>98.7</td><td>64.4</td><td>73.1</td><td>50.7</td><td>30.5</td>
+			</tr><tr class="TableItem">
+				<td>Congo, Dem. Rep. (2013)</td><td>6.4</td><td>17.0</td><td>31.4</td><td>37.9</td><td>69.6</td><td>42.0</td><td>22.6</td>
+			</tr><tr class="TableItem">
+				<td>Congo, Rep. (2009)</td><td>28.4</td><td>27.4</td><td>56.2</td><td class="center">n.a.</td><td class="center">n.a.</td><td class="center">n.a.</td><td class="center">n.a.</td>
+			</tr><tr class="TableItem">
+				<td>Costa Rica (2010)</td><td>9.4</td><td>54.0</td><td>88.6</td><td>58.8</td><td>44.9</td><td>37.7</td><td>40.6</td>
+			</tr><tr class="TableItem">
+				<td>C&#244;te d&#39;Ivoire (2016)</td><td>3.4</td><td>18.1</td><td>53.7</td><td>40.1</td><td>70.3</td><td>15.9</td><td>6.8</td>
+			</tr><tr class="TableItem">
+				<td>Croatia (2013)</td><td>12.9</td><td>70.2</td><td>95.3</td><td>39.7</td><td>72.4</td><td>29.6</td><td>22.3</td>
+			</tr><tr class="TableItem">
+				<td>Czech Republic (2013)</td><td>16.4</td><td>91.0</td><td>95.9</td><td>49.4</td><td>63.0</td><td>31.2</td><td>21.0</td>
+			</tr><tr class="TableItem">
+				<td>Djibouti (2013)</td><td>7.7</td><td>40.7</td><td>71.6</td><td>32.7</td><td>66.4</td><td>45.9</td><td>18.0</td>
+			</tr><tr class="TableItem">
+				<td>Dominica (2010)</td><td>10.3</td><td>1.8</td><td>70.8</td><td>15.5</td><td class="center">n.a.</td><td>0</td><td>12.1</td>
+			</tr><tr class="TableItem">
+				<td>Dominican Republic (2016)</td><td>17.0</td><td>42.0</td><td>76.3</td><td>38.6</td><td>67.7</td><td>13.5</td><td>5.7</td>
+			</tr><tr class="TableItem">
+				<td>Ecuador (2017)</td><td>18.3</td><td>78.3</td><td>98.9</td><td>72.4</td><td>77.6</td><td>58.2</td><td>30.0</td>
+			</tr><tr class="TableItem">
+				<td>Egypt, Arab Rep. (2016)</td><td>5.1</td><td>51.7</td><td>56.0</td><td>5.7</td><td>82.4</td><td>4.0</td><td>3.2</td>
+			</tr><tr class="TableItem">
+				<td>El Salvador (2016)</td><td>20.1</td><td>42.5</td><td>80.2</td><td>37.8</td><td>75.0</td><td>18.1</td><td>7.7</td>
+			</tr><tr class="TableItem">
+				<td>Eritrea (2009)</td><td>13.7</td><td>5.7</td><td>27.9</td><td class="center">n.a.</td><td class="center">n.a.</td><td class="center">n.a.</td><td class="center">n.a.</td>
+			</tr><tr class="TableItem">
+				<td>Estonia (2013)</td><td>24.9</td><td>79.6</td><td>97.2</td><td>23.7</td><td>60.7</td><td>30.0</td><td>13.1</td>
+			</tr><tr class="TableItem">
+				<td>Eswatini (2016)</td><td>6.4</td><td>62.5</td><td>73.1</td><td>26.9</td><td>72.7</td><td>4.8</td><td>16.1</td>
+			</tr><tr class="TableItem">
+				<td>Ethiopia (2015)</td><td>7.7</td><td>34.8</td><td>74.0</td><td>25.6</td><td>73.5</td><td>32.6</td><td>4.4</td>
+			</tr><tr class="TableItem">
+				<td>Fiji (2009)</td><td>20.3</td><td>34.1</td><td>86.0</td><td class="center">n.a.</td><td class="center">n.a.</td><td class="center">n.a.</td><td class="center">n.a.</td>
+			</tr><tr class="TableItem">
+				<td>Gabon (2009)</td><td>3.9</td><td>26.6</td><td>40.6</td><td class="center">n.a.</td><td class="center">n.a.</td><td class="center">n.a.</td><td class="center">n.a.</td>
+			</tr><tr class="TableItem">
+				<td>Gambia, The (2018)</td><td>14.6</td><td>22.4</td><td class="center">n.a.</td><td>45.3</td><td>67.4</td><td>17.0</td><td>10.7</td>
+			</tr><tr class="TableItem">
+				<td>Georgia (2013)</td><td>20.2</td><td>49.4</td><td>75.9</td><td>8.6</td><td>90.3</td><td>7.3</td><td>4.5</td>
+			</tr><tr class="TableItem">
+				<td>Ghana (2013)</td><td>14.5</td><td>33.2</td><td>64.9</td><td>52.5</td><td>51.0</td><td>69.1</td><td>22.9</td>
+			</tr><tr class="TableItem">
+				<td>Grenada (2010)</td><td>15.2</td><td>42.5</td><td>80.6</td><td>71.4</td><td>63.3</td><td>30.9</td><td>27.4</td>
+			</tr><tr class="TableItem">
+				<td>Guatemala (2017)</td><td>12.1</td><td>58.0</td><td>86.3</td><td>53.8</td><td>75.2</td><td>37.4</td><td>15.5</td>
+			</tr><tr class="TableItem">
+				<td>Guinea (2016)</td><td>16.6</td><td>19.0</td><td>58.5</td><td>23.7</td><td>77.7</td><td>10.6</td><td>7.2</td>
+			</tr><tr class="TableItem">
+				<td>Guinea-Bissau (2006)</td><td>5.9</td><td>8.8</td><td>35.5</td><td class="center">n.a.</td><td class="center">n.a.</td><td class="center">n.a.</td><td class="center">n.a.</td>
+			</tr><tr class="TableItem">
+				<td>Guyana, CR (2010)</td><td>17.4</td><td>46.1</td><td>92.5</td><td>36.4</td><td>66.4</td><td>48.2</td><td>46.1</td>
+			</tr><tr class="TableItem">
+				<td>Honduras (2016)</td><td>10.7</td><td>43.5</td><td>82.9</td><td>41.9</td><td>74.2</td><td>27.2</td><td>7.4</td>
+			</tr><tr class="TableItem">
+				<td>Hungary (2013)</td><td>9.5</td><td>61.2</td><td>81.1</td><td>22.8</td><td>75.0</td><td>23.1</td><td>6.9</td>
+			</tr><tr class="TableItem">
+				<td>India (2014)</td><td>9.4</td><td>48.9</td><td>78.0</td><td>41.9</td><td>73.9</td><td>56.4</td><td>29.7</td>
+			</tr><tr class="TableItem">
+				<td>Indonesia (2015)</td><td>23.7</td><td>20.5</td><td>30.6</td><td>6.2</td><td>74.7</td><td>11.4</td><td>1.9</td>
+			</tr><tr class="TableItem">
+				<td>Iraq (2011)</td><td>3.4</td><td>15.2</td><td>21.3</td><td class="center">n.a.</td><td class="center">n.a.</td><td class="center">n.a.</td><td class="center">n.a.</td>
+			</tr><tr class="TableItem">
+				<td>Israel (2013)</td><td>1.9</td><td>67.2</td><td>98.9</td><td>17.1</td><td>70.7</td><td>12.3</td><td>9.5</td>
+			</tr><tr class="TableItem">
+				<td>Jamaica (2010)</td><td>14.6</td><td>36.4</td><td>72.6</td><td>27.7</td><td>48.3</td><td>19.1</td><td>20.4</td>
+			</tr><tr class="TableItem">
+				<td>Jordan (2013)</td><td>8.7</td><td>45.2</td><td>61.3</td><td>17.6</td><td>53.4</td><td>18.5</td><td>6.4</td>
+			</tr><tr class="TableItem">
+				<td>Kazakhstan (2013)</td><td>10.0</td><td>43.9</td><td>88.2</td><td>17.0</td><td>73.5</td><td>16.8</td><td>1.9</td>
+			</tr><tr class="TableItem">
+				<td>Kenya (2018)</td><td>19.9</td><td>47.3</td><td class="center">n.a.</td><td>51.9</td><td>55.8</td><td>24.8</td><td>20.3</td>
+			</tr><tr class="TableItem">
+				<td>Kosovo (2013)</td><td>26.2</td><td>69.2</td><td>86.6</td><td>57.1</td><td>88.7</td><td>44.0</td><td>26.2</td>
+			</tr><tr class="TableItem">
+				<td>Kyrgyz Republic (2013)</td><td>19.2</td><td>56.9</td><td>85.9</td><td>46.6</td><td>64.1</td><td>43.0</td><td>11.2</td>
+			</tr><tr class="TableItem">
+				<td>Lao PDR (2018)</td><td>6.0</td><td>30.9</td><td class="center">n.a.</td><td>22.0</td><td>48.5</td><td>20.2</td><td>1.4</td>
+			</tr><tr class="TableItem">
+				<td>Latvia (2013)</td><td>15.5</td><td>48.2</td><td>92.6</td><td>18.6</td><td>57.8</td><td>11.4</td><td>3.4</td>
+			</tr><tr class="TableItem">
+				<td>Lebanon (2013)</td><td>4.3</td><td>64.0</td><td>82.3</td><td>40.5</td><td>75.0</td><td>41.7</td><td>13.4</td>
+			</tr><tr class="TableItem">
+				<td>Lesotho (2016)</td><td>25.5</td><td>14.9</td><td>44.6</td><td>7.8</td><td>100.0</td><td>6.4</td><td>1.0</td>
+			</tr><tr class="TableItem">
+				<td>Liberia (2017)</td><td>7.0</td><td>13.3</td><td>47.3</td><td>53.5</td><td>92.7</td><td>30.8</td><td>10.5</td>
+			</tr><tr class="TableItem">
+				<td>Lithuania (2013)</td><td>17.9</td><td>67.0</td><td>98.0</td><td>26.2</td><td>65.5</td><td>21.2</td><td>8.9</td>
+			</tr><tr class="TableItem">
+				<td>Macedonia, FYR (2013)</td><td>8.9</td><td>58.7</td><td>87.9</td><td>27.0</td><td>79.6</td><td>14.8</td><td>8.8</td>
+			</tr><tr class="TableItem">
+				<td>Madagascar (2013)</td><td>17.7</td><td>29.5</td><td>62.0</td><td class="center">n.a.</td><td class="center">n.a.</td><td class="center">n.a.</td><td class="center">n.a.</td>
+			</tr><tr class="TableItem">
+				<td>Malawi (2014)</td><td>21.5</td><td>44.9</td><td>79.6</td><td>53.7</td><td>58.6</td><td>65.4</td><td>18.4</td>
+			</tr><tr class="TableItem">
+				<td>Malaysia (2015)</td><td>23.0</td><td>31.5</td><td>46.2</td><td>3.5</td><td>75.2</td><td>37.3</td><td>10.5</td>
+			</tr><tr class="TableItem">
+				<td>Mali (2016)</td><td>16.5</td><td>42.2</td><td>69.6</td><td>38.3</td><td>90.1</td><td>36.4</td><td>11.4</td>
+			</tr><tr class="TableItem">
+				<td>Mauritania (2014)</td><td>8.5</td><td>40.6</td><td>82.3</td><td>59.0</td><td>67.2</td><td>70.8</td><td>23.7</td>
+			</tr><tr class="TableItem">
+				<td>Mauritius (2009)</td><td>14.6</td><td>35.9</td><td>69.3</td><td class="center">n.a.</td><td class="center">n.a.</td><td class="center">n.a.</td><td class="center">n.a.</td>
+			</tr><tr class="TableItem">
+				<td>Mexico (2010)</td><td>10.7</td><td>54.6</td><td>77.3</td><td>33.9</td><td>44.3</td><td>45.4</td><td>22.7</td>
+			</tr><tr class="TableItem">
+				<td>Micronesia, Fed. Sts. (2009)</td><td>0</td><td>29.6</td><td>85.1</td><td class="center">n.a.</td><td class="center">n.a.</td><td class="center">n.a.</td><td class="center">n.a.</td>
+			</tr><tr class="TableItem">
+				<td>Moldova (2013)</td><td>19.3</td><td>58.6</td><td>65.9</td><td>27.7</td><td>78.0</td><td>27.2</td><td>9.9</td>
+			</tr><tr class="TableItem">
+				<td>Mongolia (2013)</td><td>17.8</td><td>51.0</td><td>64.0</td><td>23.7</td><td>98.7</td><td>35.5</td><td>16.1</td>
+			</tr><tr class="TableItem">
+				<td>Montenegro (2013)</td><td>9.0</td><td>29.7</td><td>81.7</td><td>14.3</td><td>22.7</td><td>11.7</td><td>9.5</td>
+			</tr><tr class="TableItem">
+				<td>Morocco (2013)</td><td>18.5</td><td>69.4</td><td>97.0</td><td>29.5</td><td>52.6</td><td>41.9</td><td>14.3</td>
+			</tr><tr class="TableItem">
+				<td>Mozambique (2018)</td><td>20.7</td><td>40.3</td><td class="center">n.a.</td><td>35.4</td><td>55.9</td><td>15.6</td><td>7.6</td>
+			</tr><tr class="TableItem">
+				<td>Myanmar (2016)</td><td>4.0</td><td>13.2</td><td>23.5</td><td>15.6</td><td>64.8</td><td>14.3</td><td>1.3</td>
+			</tr><tr class="TableItem">
+				<td>Namibia (2014)</td><td>22.4</td><td>39.4</td><td>78.1</td><td>59.6</td><td>69.0</td><td>69.8</td><td>42.2</td>
+			</tr><tr class="TableItem">
+				<td>Nepal (2013)</td><td>1.6</td><td>26.1</td><td>48.3</td><td>50.8</td><td>53.8</td><td>68.1</td><td>7.3</td>
+			</tr><tr class="TableItem">
+				<td>Nicaragua (2016)</td><td>12.0</td><td>40.1</td><td>74.2</td><td>52.9</td><td>73.8</td><td>32.9</td><td>17.9</td>
+			</tr><tr class="TableItem">
+				<td>Niger (2017)</td><td>3.5</td><td>33.0</td><td>56.5</td><td>33.4</td><td>54.7</td><td>14.0</td><td>8.0</td>
+			</tr><tr class="TableItem">
+				<td>Nigeria (2014)</td><td>6.5</td><td>22.3</td><td>23.5</td><td>52.7</td><td>68.6</td><td>62.9</td><td>13.8</td>
+			</tr><tr class="TableItem">
+				<td>Pakistan (2013)</td><td>22.1</td><td>46.9</td><td>54.4</td><td>30.8</td><td>74.0</td><td>43.5</td><td>19.8</td>
+			</tr><tr class="TableItem">
+				<td>Panama (2010)</td><td>31.5</td><td>40.5</td><td>67.7</td><td>12.0</td><td>40.1</td><td>9.9</td><td>7.4</td>
+			</tr><tr class="TableItem">
+				<td>Papua New Guinea (2015)</td><td>34.5</td><td>68.9</td><td>96.9</td><td>59.3</td><td>70.9</td><td>73.5</td><td>21.5</td>
+			</tr><tr class="TableItem">
+				<td>Paraguay (2017)</td><td>7.4</td><td>71.6</td><td>81.6</td><td>53.8</td><td>73.2</td><td>28.0</td><td>15.0</td>
+			</tr><tr class="TableItem">
+				<td>Peru (2017)</td><td>11.8</td><td>69.2</td><td>96.7</td><td>61.3</td><td>70.7</td><td>47.0</td><td>22.9</td>
+			</tr><tr class="TableItem">
+				<td>Philippines (2015)</td><td>11.2</td><td>52.4</td><td>80.4</td><td>32.9</td><td>61.7</td><td>40.9</td><td>21.9</td>
+			</tr><tr class="TableItem">
+				<td>Poland (2013)</td><td>21.1</td><td>84.1</td><td>90.6</td><td>34.6</td><td>70.5</td><td>25.2</td><td>9.2</td>
+			</tr><tr class="TableItem">
+				<td>Romania (2013)</td><td>19.3</td><td>67.8</td><td>89.2</td><td>40.9</td><td>55.8</td><td>43.2</td><td>10.3</td>
+			</tr><tr class="TableItem">
+				<td>Russian Federation (2012)</td><td>11.2</td><td>64.6</td><td>95.1</td><td>26.2</td><td>72.3</td><td>21.6</td><td>13.0</td>
+			</tr><tr class="TableItem">
+				<td>Rwanda (2011)</td><td>23.5</td><td>34.2</td><td>76.5</td><td>58.0</td><td>69.5</td><td>82.9</td><td>30.0</td>
+			</tr><tr class="TableItem">
+				<td>Samoa (2009)</td><td>19.3</td><td>32.8</td><td>86.5</td><td class="center">n.a.</td><td class="center">n.a.</td><td class="center">n.a.</td><td class="center">n.a.</td>
+			</tr><tr class="TableItem">
+				<td>Senegal (2014)</td><td>14.4</td><td>34.6</td><td>64.7</td><td>49.8</td><td>66.7</td><td>51.9</td><td>8.5</td>
+			</tr><tr class="TableItem">
+				<td>Serbia (2013)</td><td>21.0</td><td>74.0</td><td>96.8</td><td>39.5</td><td>56.6</td><td>21.5</td><td>15.1</td>
+			</tr><tr class="TableItem">
+				<td>Sierra Leone (2017)</td><td>2.7</td><td>7.0</td><td>29.1</td><td>26.4</td><td>88.1</td><td>14.0</td><td>11.1</td>
+			</tr><tr class="TableItem">
+				<td>Slovak Republic (2013)</td><td>35.1</td><td>90.6</td><td>99.8</td><td>19.9</td><td>71.7</td><td>17.8</td><td>8.3</td>
+			</tr><tr class="TableItem">
+				<td>Slovenia (2013)</td><td>19.0</td><td>82.4</td><td>97.3</td><td>34.0</td><td>40.6</td><td>9.0</td><td>14.8</td>
+			</tr><tr class="TableItem">
+				<td>Solomon Islands (2015)</td><td>33.4</td><td>25.2</td><td>83.7</td><td>42.3</td><td>73.6</td><td>67.7</td><td>20.0</td>
+			</tr><tr class="TableItem">
+				<td>South Africa (2007)</td><td>12.4</td><td>36.0</td><td>70.5</td><td class="center">n.a.</td><td class="center">n.a.</td><td class="center">n.a.</td><td class="center">n.a.</td>
+			</tr><tr class="TableItem">
+				<td>South Sudan (2014)</td><td>25.4</td><td>25.6</td><td>51.2</td><td>48.3</td><td>55.8</td><td>42.0</td><td>17.5</td>
+			</tr><tr class="TableItem">
+				<td>Sri Lanka (2011)</td><td>9.3</td><td>18.6</td><td>30.5</td><td>20.3</td><td>69.3</td><td>35.5</td><td>7.5</td>
+			</tr><tr class="TableItem">
+				<td>St. Kitts and Nevis (2010)</td><td>9.6</td><td>40.4</td><td>91.6</td><td>41.4</td><td>67.0</td><td>26.0</td><td>30.2</td>
+			</tr><tr class="TableItem">
+				<td>St. Lucia (2010)</td><td>0</td><td>15.4</td><td>53.9</td><td>14.1</td><td>0</td><td>1.4</td><td>9.9</td>
+			</tr><tr class="TableItem">
+				<td>St. Vincent and the Grenadines (2010)</td><td>24.6</td><td>32.3</td><td>82.2</td><td>45.9</td><td>65.6</td><td>40.6</td><td>30.1</td>
+			</tr><tr class="TableItem">
+				<td>Sudan (2014)</td><td>9.5</td><td>64.7</td><td>67.0</td><td>55.9</td><td>79.5</td><td>45.1</td><td>25.2</td>
+			</tr><tr class="TableItem">
+				<td>Suriname (2018)</td><td>5.3</td><td>77.1</td><td class="center">n.a.</td><td>30.2</td><td>74.0</td><td>21.7</td><td>19.7</td>
+			</tr><tr class="TableItem">
+				<td>Sweden (2014)</td><td>14.2</td><td>91.7</td><td class="center">n.a.</td><td>74.3</td><td>73.0</td><td>72.6</td><td>29.9</td>
+			</tr><tr class="TableItem">
+				<td>Tajikistan (2013)</td><td>25.3</td><td>37.2</td><td>56.9</td><td>14.4</td><td>86.8</td><td>17.8</td><td>4.8</td>
+			</tr><tr class="TableItem">
+				<td>Tanzania (2013)</td><td>10.9</td><td>22.6</td><td>30.0</td><td>51.0</td><td>74.7</td><td>57.6</td><td>12.6</td>
+			</tr><tr class="TableItem">
+				<td>Thailand (2016)</td><td>5.6</td><td>45.5</td><td>52.9</td><td>8.2</td><td>85.8</td><td>11.9</td><td>1.1</td>
+			</tr><tr class="TableItem">
+				<td>Timor-Leste (2015)</td><td>23.3</td><td>14.6</td><td>43.0</td><td>38.3</td><td>79.8</td><td>62.7</td><td>22.2</td>
+			</tr><tr class="TableItem">
+				<td>Togo (2016)</td><td>8.0</td><td>29.8</td><td>82.6</td><td>38.0</td><td>74.1</td><td>15.5</td><td>18.1</td>
+			</tr><tr class="TableItem">
+				<td>Tonga (2009)</td><td>65.8</td><td>7.0</td><td>56.5</td><td class="center">n.a.</td><td class="center">n.a.</td><td class="center">n.a.</td><td class="center">n.a.</td>
+			</tr><tr class="TableItem">
+				<td>Trinidad and Tobago (2010)</td><td>2.2</td><td>30.8</td><td>81.2</td><td>39.3</td><td>37.5</td><td>17.5</td><td>12.4</td>
+			</tr><tr class="TableItem">
+				<td>Tunisia (2013)</td><td>8.1</td><td>66.3</td><td>93.6</td><td>27.6</td><td>55.2</td><td>35.2</td><td>18.0</td>
+			</tr><tr class="TableItem">
+				<td>Turkey (2013)</td><td>19.6</td><td>68.1</td><td>89.3</td><td>9.5</td><td>73.2</td><td>10.7</td><td>10.1</td>
+			</tr><tr class="TableItem">
+				<td>Uganda (2013)</td><td>35.6</td><td>19.2</td><td>39.7</td><td>67.1</td><td>83.4</td><td>76.8</td><td>29.7</td>
+			</tr><tr class="TableItem">
+				<td>Ukraine (2013)</td><td>13.8</td><td>55.3</td><td>87.9</td><td>10.9</td><td>56.1</td><td>19.8</td><td>4.0</td>
+			</tr><tr class="TableItem">
+				<td>Uruguay (2017)</td><td>23.0</td><td>69.1</td><td>97.2</td><td>71.4</td><td>66.9</td><td>66.6</td><td>22.9</td>
+			</tr><tr class="TableItem">
+				<td>Uzbekistan (2013)</td><td>8.5</td><td>22.6</td><td>44.4</td><td>3.8</td><td>39.5</td><td>1.7</td><td>0.1</td>
+			</tr><tr class="TableItem">
+				<td>Vanuatu (2009)</td><td>0</td><td>23.5</td><td>83.5</td><td class="center">n.a.</td><td class="center">n.a.</td><td class="center">n.a.</td><td class="center">n.a.</td>
+			</tr><tr class="TableItem">
+				<td>Venezuela, R.B. (2010)</td><td>3.7</td><td>51.5</td><td>77.3</td><td>33.1</td><td>15.9</td><td>40.8</td><td>22.9</td>
+			</tr><tr class="TableItem">
+				<td>Vietnam (2015)</td><td>10.8</td><td>48.6</td><td>91.5</td><td>23.2</td><td>53.2</td><td>37.9</td><td>15.7</td>
+			</tr><tr class="TableItem">
+				<td>West Bank and Gaza (2013)</td><td>5.0</td><td>30.9</td><td>45.2</td><td>19.1</td><td>61.9</td><td>32.0</td><td>10.3</td>
+			</tr><tr class="TableItem">
+				<td>Yemen, Rep. (2013)</td><td>3.3</td><td>21.0</td><td>21.8</td><td>44.0</td><td>55.6</td><td>45.5</td><td>6.4</td>
+			</tr><tr class="TableItem">
+				<td>Zambia (2013)</td><td>25.7</td><td>20.3</td><td>53.1</td><td>56.1</td><td>65.6</td><td>58.4</td><td>20.4</td>
+			</tr><tr class="TableItem">
+				<td>Zimbabwe (2016)</td><td>21.1</td><td>38.7</td><td>75.1</td><td>29.4</td><td>57.5</td><td>13.8</td><td>12.4</td>
+			</tr>
+		</tbody><tfoot>
+
+		</tfoot>
+	</table>
+</div>
