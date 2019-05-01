@@ -639,15 +639,15 @@ percent_married
 # In[128]:
 
 
-level2_list = []
-for i in range(2010, 2018):
-    df = df_marriage_rate[df_marriage_rate['Year']==i]
-    string = 'pi_'+str(i)
-    p1 = peace['Country']
-    p2 = peace[string]   
-    p = pd.concat([p1, p2],axis = 1)
-    df_level2 = pd.merge(df, p, on = 'Country', how='inner')
-    level2_list.append(df_level2)
+# level2_list = []
+# for i in range(2010, 2018):
+#     df = df_marriage_rate[df_marriage_rate['Year']==i]
+#     string = 'pi_'+str(i)
+#     p1 = peace['Country']
+#     p2 = peace[string]   
+#     p = pd.concat([p1, p2],axis = 1)
+#     df_level2 = pd.merge(df, p, on = 'Country', how='inner')
+#     level2_list.append(df_level2)
 
 
 # ## Part 3: Analysis of level 3-4, Belonging-Esteem 
