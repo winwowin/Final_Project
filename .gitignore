@@ -102,9 +102,3 @@ venv.bak/
 
 # mypy
 .mypy_cache/
-590PR_final_datasets/Innovation-2013.csv
-590PR_final_datasets/Innovation-2014.csv
-590PR_final_datasets/Innovation-2015.csv
-590PR_final_datasets/Innovation-2016.csv
-590PR_final_datasets/Innovation-2017.csv
-590PR_final_datasets/Innovation-2018.csv
