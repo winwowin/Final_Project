@@ -42,6 +42,7 @@ Make Maslow Great Again! (or not, if possible, because in that situation is most
 
 # Final Report
 ## Introduction
+![image](https://github.com/winwowin/World-living-quality-analysis/blob/master/images/Pyramid1.PNG)
 Maslow’s hierarchy of needs is a theory in psychology proposed by Abraham Maslow in his 1943 paper "A Theory of Human Motivation" in Psychological Review. 
 Maslow's hierarchy of needs is used to study how humans intrinsically partake in behavioral motivation. Maslow used the terms "physiological", "safety", "belonging and love", "social needs" or "esteem", and "self-actualization" to describe the pattern through which human motivations generally move.
 This means that in order for motivation to occur at the next level, each level must be satisfied within the individual themselves.
@@ -51,24 +52,31 @@ The purpose of our experiment is to validate whether Maslow’s model for the hi
 We are trying to put real data that can represent one or two factors in his pyramid to simulate the conceptual model. So we have to quantify the needs at all levels and try to find their relations.
 - Maslow’s pyramids do make sense in the real world
 - Maslow’s pyramids have some preconditions to be correct
+![image](https://github.com/winwowin/World-living-quality-analysis/blob/master/images/MMGA.PNG)
 ## Methodology & Modeling
 The original hierarchy states that a lower level must be completely satisfied and fulfilled before moving onto a higher pursuit. 
+![image](https://github.com/winwowin/World-living-quality-analysis/blob/master/images/model.PNG)
 ## Abstract Model
 Based on the description of Maslow’s original words, we can extract the information to create a logical model like this:
 - When lower level needs are not satisfied, higher level needs are zero
 - when lower level needs are met, higher level needs start increasing
 - The increasing rate of higher level needs should be larger than the lower level needs because people move onto the next level
+![image](https://github.com/winwowin/World-living-quality-analysis/blob/master/images/Formula.PNG)
 ## Dataset Mapping
 In order to quantify the psychological concepts in the pyramid, we have to pick data from the real world to represent each level. Since we did not find an accurate description of what exactly each level means, we have to pick the data according to our own understanding and trying to be objective in this process.
+![image](https://github.com/winwowin/World-living-quality-analysis/blob/master/images/DataMapping.PNG)
+
 ## Plotting Strategies
 The most difficult part of our project is to draw the plot that can show the relationship between lower levels and higher levels. The ways of processing the data and smoothing the curve matter a lot. Our early attempt to draw the plot failed because it’s too skewed and the dots are too many to see the relationship. So we decided to take the following strategies to improve it:
 - divide the lower level data into 10 categories of the same range
 - calculate the mean value of the higher level data that falls into the same range
 - plot the data, so that we only get 10 dots, which is clear
+![image](https://github.com/winwowin/World-living-quality-analysis/blob/master/images/PlottingStrategies.PNG)
 ## Results
 ## Conclusion & Discussion
 As we can see from the results of our experiments, most of the results correspond to the expected deduction from the original theory. However, some are different, and we can make some assumptions about the reasons behind the scene.
 Take the first plot as an example: it reveals the relationship between hunger and safety. When the undernourishment index value is low, the peace index value is low as well. It means as people going far away from hunger, their environment gets safer too. This is the same as part of the theory. However, things get different when people are not able to fulfill their needs for food. In areas where people suffer hunger, the peace index value goes into two opposing extremes: very safe or very dangerous. It shows us two different hells: people in dangerous areas take all risks trying to get food, while people in safe areas are too hungry to commit any crimes. However different, both pathetic. 
+![image](https://github.com/winwowin/World-living-quality-analysis/blob/master/images/Discussion.PNG)
 ## Future Research
 Split the dataset and try to find some scope of the theory. For example, split the data of developed and deloping countries to see their differences.
 Modify the dataset to make it more suitable for the level it presents. For example, combine the poverty and undernourishment data to represent the first level need.
