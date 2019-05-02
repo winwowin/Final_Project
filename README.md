@@ -73,6 +73,14 @@ The most difficult part of our project is to draw the plot that can show the rel
 - plot the data, so that we only get 10 dots, which is clear
 ![image](https://github.com/winwowin/World-living-quality-analysis/blob/master/images/PlottingStrategies.PNG)
 ## Results
+level1 to level2:
+![image](https://github.com/winwowin/World-living-quality-analysis/blob/master/images/level1-2.png)
+level2 to level3:
+![image](https://github.com/winwowin/World-living-quality-analysis/blob/master/images/level2-3.png)
+level2 to level4:
+![image](https://github.com/winwowin/World-living-quality-analysis/blob/master/images/level2-4.png)
+level2 to level5:
+
 ## Conclusion & Discussion
 As we can see from the results of our experiments, most of the results correspond to the expected deduction from the original theory. However, some are different, and we can make some assumptions about the reasons behind the scene.
 Take the first plot as an example: it reveals the relationship between hunger and safety. When the undernourishment index value is low, the peace index value is low as well. It means as people going far away from hunger, their environment gets safer too. This is the same as part of the theory. However, things get different when people are not able to fulfill their needs for food. In areas where people suffer hunger, the peace index value goes into two opposing extremes: very safe or very dangerous. It shows us two different hells: people in dangerous areas take all risks trying to get food, while people in safe areas are too hungry to commit any crimes. However different, both pathetic. 
