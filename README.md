@@ -73,14 +73,8 @@ The most difficult part of our project is to draw the plot that can show the rel
 - plot the data, so that we only get 10 dots, which is clear
 ![image](https://github.com/winwowin/World-living-quality-analysis/blob/master/images/PlottingStrategies.PNG)
 ## Results
-level1 to level2:
-![image](https://github.com/winwowin/World-living-quality-analysis/blob/master/images/level1-2.png)
-level2 to level3:
-![image](https://github.com/winwowin/World-living-quality-analysis/blob/master/images/level2-3.png)
-level2 to level4:
-![image](https://github.com/winwowin/World-living-quality-analysis/blob/master/images/level2-4.png)
-level4 to level5:
-![image](https://github.com/winwowin/World-living-quality-analysis/blob/master/images/level4-5.png)
+results:
+![image](https://github.com/winwowin/World-living-quality-analysis/blob/master/images/resullts.PNG)
 
 ## Conclusion & Discussion
 As we can see from the results of our experiments, most of the results correspond to the expected deduction from the original theory. However, some are different, and we can make some assumptions about the reasons behind the scene.
