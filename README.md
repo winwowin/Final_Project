@@ -1,5 +1,5 @@
 # World-living-quality-analysis
-# Proposal
+# Proposal (Final report is below)
 ### Title:
 Make Maslow Great Again ...or not
 ——A Statistical Methodology/Model/Proof/Falsification of Maslow's Pyramid
