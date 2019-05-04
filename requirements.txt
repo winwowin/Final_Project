@@ -1,0 +1,12 @@
+# List of the pip packages that must be installed for this project
+numpy
+requests
+re
+bs4
+pandas
+logging
+zipfile
+math
+numpy
+matplotlib
+seaborn
