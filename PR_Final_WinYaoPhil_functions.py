@@ -348,10 +348,18 @@ def prep_innovation() -> list:
 # need docstring
 def analysis_first_two_level(hunger: pd.DataFrame, peace: pd.DataFrame) -> tuple:
     """
-
-    :param hunger:
-    :param peace:
-    :return:
+    This function is to analyze the first two levels of human needs' hierarchy. We choose the columns we want and
+    merge these together on the Country name. Because all these two datasets have different columns for each year, so
+    we get every year's data by getting corresponding column and merge them together. Then, we can get the data from lower
+    level and higher level, two things here are that we need to drop all the data points that contains Nan value in either
+    lower or higher level and then sorted the data in the order of small to large for the data of lower level. After this
+    process, the function should return all these two lists and one dataframe, shows correspondingly the data from lower
+    level, higher level and merged dataframe that can be used later. Because the original datasets only contains the data
+    from 2010 to 2016 in common, so we use the data from these 7 years.
+    :param hunger: World Hunger DataFrame
+    :param peace: World Peace Index's DataFrame
+    :return: all these two lists and one dataframe, shows correspondingly the data from lower level, higher level and
+    merged dataframe
 
     >>> hunger_data = Data().get_hunger()
     >>> peace_data = Data().get_peace()
@@ -371,10 +379,12 @@ def analysis_first_two_level(hunger: pd.DataFrame, peace: pd.DataFrame) -> tuple
         dd = df.sort_values(by=i[0], ascending=True)
         x = np.asarray(dd[i[0]])
         y = np.asarray(dd[i[1]])
+        index_list = []
         for j in range(x.shape[0]):
-            if math.isnan(x[j]) == True:
-                new_x = np.delete(x, j)
-                new_y = np.delete(y, j)
+            if math.isnan(x[j]) == True or math.isnan(y[j]) == True:
+                index_list.append(j)
+        new_x = np.delete(x, index_list)
+        new_y = np.delete(y, index_list)
         x_list.append(new_x)
         y_list.append(new_y)
     return x_list, y_list, df_level1
@@ -382,10 +392,12 @@ def analysis_first_two_level(hunger: pd.DataFrame, peace: pd.DataFrame) -> tuple
 # need docstring
 def plot12(x_list: list, y_list: list):
     """
-
-    :param x_list:
-    :param y_list:
-    :return:
+    This function is to use the two lists of lower and higher level data we get before and plot a figure about their relationship
+    for all the countries in these two datasets. The figure should contain all the countries as corresponding data points.
+    So the trend should be harder to see.
+    :param x_list: List of the lower level sorted data
+    :param y_list: List of the higher level corresponding data
+    :return: A plt plot shows how the brief trend look like for all countries.
 
     >>> hunger_data = Data().get_hunger()
     >>> peace_data = Data().get_peace()
@@ -416,10 +428,14 @@ def plot12(x_list: list, y_list: list):
 # need docstring
 def plot_cat12(x_list: list, y_list: list):
     """
-
-    :param x_list:
-    :param y_list:
-    :return:
+    From previous plot, we can not see the trend and check if all kinds of countries satisfy this relationship.
+    So this function is used to categorize the lower level needs in different ranges. By using this way, we can smooth
+    the relationship and see the corresponding trend more clearly. After we've done with this process, we'll check if
+    the relationship we got can fit the model we proposed or not. Moreover, if the trend of this data plot is not clear
+    or didn't change a lot, we would go back and check if the dataset we used has deficiency and substitute with other datasets.
+    :param x_list: List of Lower Level Sorted data
+    :param y_list: List of corresponding higher level data
+    :return: plt plot shows how the categorized figure look like.
 
     >>> hunger_data = Data().get_hunger()
     >>> peace_data = Data().get_peace()
@@ -498,12 +514,16 @@ def plot_cat12(x_list: list, y_list: list):
 # need docstring
 def box_plot_level12(df_level1: pd.DataFrame):
     """
-
+    The last step of analysis in each step is to check if the results we got suits for all the kinds of countries, like
+    poor ones, developing ones and developed ondes. So in this function, we plotted the corresponding box plot to show the statistics information
+    of corresponding datasets and check if there are any outliers or if the data of each category is highly skewed. However,
+    due to the fact that the total countries' amount is not that huge, so for some categories in some analysis level,
+    the data can be highly skewed, or have outlier, or even just one or two data points.
     Requirement:
     import seaborn as sns
 
-    :param df_level1:
-    :return:
+    :param df_level1: the dataframe of merge datasets
+    :return: the Box plot of all categories from lower level data
 
     >>> hunger_data = Data().get_hunger()
     >>> peace_data = Data().get_peace()
@@ -561,9 +581,10 @@ def box_plot_level12(df_level1: pd.DataFrame):
 
 def get_marriage_rate(married: pd.DataFrame) -> list:
     """
-
-    :param married:
-    :return:
+    Because the marriage data only has marriage population, we need to manually calculate the marriage rate for every country
+    in each year
+    :param married: The original marriage dataset
+    :return: Calculated dataset
 
     >>> married = Data().get_marital()
     >>> married = married.astype({"Year": int}, copy=False)
@@ -585,12 +606,19 @@ def get_marriage_rate(married: pd.DataFrame) -> list:
 
 def analysis_two_third_level(peace: pd.DataFrame, percent_married: pd.DataFrame) -> (list, list, pd.DataFrame):
     """
-
-
-
-    :param peace:
-    :param percent_married:
-    :return:
+    This function is to analyze the second and third levels of human needs' hierarchy. We choose the columns we want and
+    merge these together on the Country name. Because peaceful index dataset has different columns for each year and marriage data
+    has the samecolumns name for every year, so we get every year's data by getting corresponding column and merge them together.
+    In order to get the marriage percentage for evey country, we remade our dataset by calculating the percentage of marriage population and total population.
+    Then, we can get the data from lower level and higher level, two things here are that we need to drop all the data points that contains Nan value in either
+    lower or higher level and then sorted the data in the order of small to large for the data of lower level. After this
+    process, the function should return all these two lists and one dataframe, shows correspondingly the data from lower
+    level, higher level and merged dataframe that can be used later. Because the original datasets only contains the data
+    from 2010 to 2018 in common, so we use the data from these 9 years.
+    :param peace: World Peace Index's DataFrame
+    :param percent_married: The percentage_marriage data we made in the previous function
+    :return: all these two lists and one dataframe, shows correspondingly the data from lower level, higher level and
+    merged dataframe
 
     >>> peace_data = Data().get_peace()
     >>> married = Data().get_marital()
@@ -617,21 +645,26 @@ def analysis_two_third_level(peace: pd.DataFrame, percent_married: pd.DataFrame)
         dd = df.sort_values(by=[pi_list[s]], ascending=True)
         x = np.asarray(dd[pi_list[s]])
         y = np.asarray(dd['Marriage_Rate'])
+        index_list = []
         for j in range(x.shape[0]):
-            if math.isnan(x[j]) == True:
-                new_y = np.delete(y,j)
-                new_x = np.delete(x,j)
-        x_list.append(x)
-        y_list.append(y)
+            if math.isnan(x[j]) == True or math.isnan(y[j]) == True:
+                index_list.append(j)
+        new_x = np.delete(x, index_list)
+        new_y = np.delete(y, index_list)
+        x_list.append(new_x)
+        y_list.append(new_y)
     return x_list, y_list, df_level2
 
 
 def plot_level_23(x_list: list, y_list: list):
     """
-
-    :param x_list:
-    :param y_list:
-    :return:
+     This function is to use the two lists of lower and higher level data we get before and plot a figure about their relationship
+    for all the countries in these two datasets. The figure should contain all the countries as corresponding data points.
+    So the trend should be harder to see. However, from the result, we can see that the marriage data is bad and
+    also small in size, so we change into the world happiness data to describe the third level need.
+    :param x_list: List of the lower level sorted data
+    :param y_list: List of the higher level corresponding data
+    :return: A plt plot shows how the brief trend look like for all countries.
 
     >>> peace_data = Data().get_peace()
     >>> married = Data().get_marital()
@@ -663,10 +696,19 @@ def plot_level_23(x_list: list, y_list: list):
 
 def analysis_peace_happiness_level(peace: pd.DataFrame, happiness: pd.DataFrame) -> (list, list, list):
     """
-
-    :param peace:
-    :param happiness:
-    :return:
+    This function is to analyze the second and third levels of human needs' hierarchy, we changed the third level
+    data from marriage into world happiness status. We choose the columns we want and merge these together on the Country name.
+    Because peaceful index dataset has different columns for each year and happiness original dataset is read as a dictionary of dataframes,
+    so we get every year's data by getting corresponding column and merge them together.
+    Then, we can get the data from lower level and higher level, two things here are that we need to drop all the data points that contains Nan value in either
+    lower or higher level and then sorted the data in the order of small to large for the data of lower level. After this
+    process, the function should return all these three lists, shows correspondingly the data from lower
+    level, higher level and the list of all merged dataframes that can be used later. Because the original datasets only contains the data
+    from 2015 to 2017 in common, so we use the data from these 3 years.
+    :param peace: World peace index data
+    :param happiness: World happiness data
+    :return: all these three lists, shows correspondingly the data from lower level, higher level and list of
+    merged dataframe
 
     >>> peace_data = Data().get_peace()
     >>> happiness = Data().get_happiness()
@@ -694,21 +736,25 @@ def analysis_peace_happiness_level(peace: pd.DataFrame, happiness: pd.DataFrame)
         dd = df.sort_values(by=[pi_list[s]], ascending=True)
         x = np.asarray(dd[pi_list[s]])
         y = np.asarray(dd['Happiness Score'])
+        index_list = []
         for j in range(x.shape[0]):
-            if math.isnan(x[j]) == True:
-                new_y = np.delete(y,j)
-                new_x = np.delete(x,j)
-        x_list.append(x)
-        y_list.append(y)
+            if math.isnan(x[j]) == True or math.isnan(y[j]) == True:
+                index_list.append(j)
+        new_x = np.delete(x, index_list)
+        new_y = np.delete(y, index_list)
+        x_list.append(new_x)
+        y_list.append(new_y)
     return x_list, y_list, p_h_list
 
 
 def plot_level_p_h(x_list: list, y_list: list):
     """
-
-    :param x_list:
-    :param y_list:
-    :return:
+    This function is to use the two lists of lower and higher level data we get before and plot a figure about their relationship
+    for all the countries in these two datasets. The figure should contain all the countries as corresponding data points.
+    So the trend should be harder to see.
+    :param x_list: List of the lower level sorted data
+    :param y_list: List of the higher level corresponding data
+    :return: A plt plot shows how the brief trend look like for all countries.
 
     >>> peace_data = Data().get_peace()
     >>> happiness = Data().get_happiness()
@@ -736,10 +782,14 @@ def plot_level_p_h(x_list: list, y_list: list):
 
 def plot_cat_ph(x_list: list, y_list: list):
     """
-
-    :param x_list:
-    :param y_list:
-    :return:
+    from previous plot, we can not see the trend and check if all kinds of countries satisfy this relationship.
+    So, we categorized the lower level needs in different ranges. By using this way, we can smooth the relationship and
+    see the corresponding trend more clearly. After we've done with this process, we'll check if the relationship we got
+    can fit the model we proposed or not. Moreover, if the trend of this data plot is not clear and didn't change a lot,
+    we would go back and check if the dataset we used has deficiency and substitute with other datasets.
+    :param x_list: List of Lower Level Sorted data
+    :param y_list: List of corresponding higher level data
+    :return: plt plot shows how the categorized figure look like.
 
     >>> peace_data = Data().get_peace()
     >>> happiness = Data().get_happiness()
@@ -813,12 +863,16 @@ def plot_cat_ph(x_list: list, y_list: list):
 
 def box_plot_level_ph(p_h_list: list):
     """
-
-    Required:
+    The last step of analysis in each step is to check if the results we got suits for all the kinds of countries, like
+    poor ones, developing ones and developed ondes. So in this function, we plotted the corresponding box plot to show the statistics information
+    of corresponding datasets and check if there are any outliers or if the data of each category is highly skewed. However,
+    due to the fact that the total countries' amount is not that huge, so for some categories in some analysis level,
+    the data can be highly skewed, or have outlier, or even just one or two data points.
+    Requirement:
     import seaborn as sns
 
-    :param p_h_list:
-    :return:
+    :param p_h_list: The list of merges dataframes
+    :return: The Box plot of all categories from lower level data
 
     >>> peace_data = Data().get_peace()
     >>> happiness = Data().get_happiness()
@@ -876,10 +930,19 @@ def box_plot_level_ph(p_h_list: list):
 
 def analysis_happiness_Freedom_level(happiness: pd.DataFrame, df_free: pd.DataFrame) -> (list, list, list):
     """
-
-    :param happiness:
-    :param df_free:
-    :return:
+    This function is to analyze the third and fourth levels of human needs' hierarchy, we changed the third level
+    data from marriage into world happiness status. We choose the columns we want and merge these together on the Country name.
+    Because Freedom index dataset has same columns for each year and happiness original dataset is read as a dictionary of dataframes,
+    so we get every year's data by getting corresponding column and merge them together.
+    Then, we can get the data from lower level and higher level, two things here are that we need to drop all the data points that contains Nan value in either
+    lower or higher level and then sorted the data in the order of small to large for the data of lower level. After this
+    process, the function should return all these three lists, shows correspondingly the data from lower
+    level, higher level and the list of all merged dataframes that can be used later. Because the original datasets only contains the data
+    from 2015 to 2017 in common, so we use the data from these 3 years.
+    :param happiness: World Happiness DataFrame
+    :param df_free: World Freedom Index Dataframe
+    :return: all these three lists, shows correspondingly the data from lower level, higher level and list of
+    merged dataframe
 
     >>> happiness = Data().get_happiness()
     >>> happiness['2017.csv'] = happiness['2017.csv'][['Country', 'Happiness.Score']]
@@ -909,8 +972,8 @@ def analysis_happiness_Freedom_level(happiness: pd.DataFrame, df_free: pd.DataFr
         for j in range(x.shape[0]):
             if math.isnan(x[j]) == True or math.isnan(y[j]) == True:
                 index_list.append(j)
-        new_x = np.delete(x,index_list)
-        new_y = np.delete(y,index_list)
+        new_x = np.delete(x, index_list)
+        new_y = np.delete(y, index_list)
         x_list.append(new_x)
         y_list.append(new_y)
     return x_list, y_list, h_f_list
@@ -918,10 +981,13 @@ def analysis_happiness_Freedom_level(happiness: pd.DataFrame, df_free: pd.DataFr
 
 def plot_level_h_f(x_list: list, y_list: list):
     """
+    This function is to use the two lists of lower and higher level data we get before and plot a figure about their relationship
+    for all the countries in these two datasets. The figure should contain all the countries as corresponding data points.
+    So the trend should be harder to see.
+    :param x_list: List of the lower level sorted data
+    :param y_list: List of the higher level corresponding data
+    :return: A plt plot shows how the brief trend look like for all countries.
 
-    :param x_list:
-    :param y_list:
-    :return:
 
     >>> happiness = Data().get_happiness()
     >>> happiness['2017.csv'] = happiness['2017.csv'][['Country', 'Happiness.Score']]
@@ -949,10 +1015,14 @@ def plot_level_h_f(x_list: list, y_list: list):
 
 def plot_cat_hf(x_list: list, y_list: list):
     """
-
-    :param x_list:
-    :param y_list:
-    :return:
+    From previous plot, we can not see the trend and check if all kinds of countries satisfy this relationship.
+    So this function is used to categorize the lower level needs in different ranges. By using this way, we can smooth
+    the relationship and see the corresponding trend more clearly. After we've done with this process, we'll check if
+    the relationship we got can fit the model we proposed or not. Moreover, if the trend of this data plot is not clear
+    or didn't change a lot, we would go back and check if the dataset we used has deficiency and substitute with other datasets.
+    :param x_list: List of Lower Level Sorted data
+    :param y_list: List of corresponding higher level data
+    :return: plt plot shows how the categorized figure look like.
     >>> happiness = Data().get_happiness()
     >>> happiness['2017.csv'] = happiness['2017.csv'][['Country', 'Happiness.Score']]
     >>> happiness['2017.csv'].columns = ['Country', 'Happiness Score']
@@ -1025,12 +1095,16 @@ def plot_cat_hf(x_list: list, y_list: list):
 
 def box_plot_level_hf(h_f_list: list):
     """
-    
-    Required:
+    The last step of analysis in each step is to check if the results we got suits for all the kinds of countries, like
+    poor ones, developing ones and developed ondes. So in this function, we plotted the corresponding box plot to show the statistics information
+    of corresponding datasets and check if there are any outliers or if the data of each category is highly skewed. However,
+    due to the fact that the total countries' amount is not that huge, so for some categories in some analysis level,
+    the data can be highly skewed, or have outlier, or even just one or two data points.
+    Requirement:
     import seaborn as sns
     
-    :param h_f_list: 
-    :return:
+    :param h_f_list: The list of merges dataframes
+    :return: A plot of all the box plot for the categorizes of lower level data
 
     >>> happiness = Data().get_happiness()
     >>> happiness['2017.csv'] = happiness['2017.csv'][['Country', 'Happiness.Score']]
@@ -1088,10 +1162,18 @@ def box_plot_level_hf(h_f_list: list):
 
 def analysis_two_fourth_level(peace: pd.DataFrame, df_free: pd.DataFrame):
     """
-
-    :param peace:
-    :param df_free:
-    :return:
+    This function is to analyze the second and fourth levels of human needs' hierarchy. We choose the columns we want and
+    merge these together on the Country name. Because one dataset has same columns for each year and the other doesn't, so
+    we get every year's data by getting corresponding column and merge them together. Then, we can get the data from lower
+    level and higher level, two things here are that we need to drop all the data points that contains Nan value in either
+    lower or higher level and then sorted the data in the order of small to large for the data of lower level. After this
+    process, the function should return all these two lists and one dataframe, shows correspondingly the data from lower
+    level, higher level and merged dataframe that can be used later. Because the original datasets only contains the data
+    from 2010 to 2016 in common, so we use the data from these 7 years.
+    :param peace: World Peace Index's DataFrame
+    :param df_free: World Freedom Index's DataFrame
+    :return: all these three lists, shows correspondingly the data from lower level, higher level and list of
+    merged dataframe
 
     >>> peace_data = Data().get_peace()
     >>> freedom = Data().get_freedom()
@@ -1132,10 +1214,12 @@ def analysis_two_fourth_level(peace: pd.DataFrame, df_free: pd.DataFrame):
 
 def plot_level_24(x_list: list, y_list: list):
     """
-
-    :param x_list:
-    :param y_list:
-    :return:
+    This function is to use the two lists of lower and higher level data we get before and plot a figure about their relationship
+    for all the countries in these two datasets. The figure should contain all the countries as corresponding data points.
+    So the trend should be harder to see.
+    :param x_list: List of the lower level sorted data
+    :param y_list: List of the higher level corresponding data
+    :return: A plt plot shows how the brief trend look like for all countries.
 
     >>> peace_data = Data().get_peace()
     >>> freedom = Data().get_freedom()
@@ -1165,10 +1249,14 @@ def plot_level_24(x_list: list, y_list: list):
 
 def plot_cat24(x_list: list, y_list: list):
     """
-
-    :param x_list:
-    :param y_list:
-    :return:
+    From previous plot, we can not see the trend and check if all kinds of countries satisfy this relationship.
+    So this function is used to categorize the lower level needs in different ranges. By using this way, we can smooth
+    the relationship and see the corresponding trend more clearly. After we've done with this process, we'll check if
+    the relationship we got can fit the model we proposed or not. Moreover, if the trend of this data plot is not clear
+    or didn't change a lot, we would go back and check if the dataset we used has deficiency and substitute with other datasets.
+    :param x_list: List of Lower Level Sorted data
+    :param y_list: List of corresponding higher level data
+    :return: plt plot shows how the categorized figure look like.
 
     >>> peace_data = Data().get_peace()
     >>> freedom = Data().get_freedom()
@@ -1239,19 +1327,23 @@ def plot_cat24(x_list: list, y_list: list):
 
 def box_plot_level24(level_list24: list):
     """
-    
-    Required:
+    The last step of analysis in each step is to check if the results we got suits for all the kinds of countries, like
+    poor ones, developing ones and developed ondes. So in this function, we plotted the corresponding box plot to show the statistics information
+    of corresponding datasets and check if there are any outliers or if the data of each category is highly skewed. However,
+    due to the fact that the total countries' amount is not that huge, so for some categories in some analysis level,
+    the data can be highly skewed, or have outlier, or even just one or two data points.
+    Requirement:
     import seaborn as sns
     
-    :param level_list24: 
-    :return:
+    :param level_list24: The list of merges dataframes
+    :return: the Box plot of all categories from lower level data
 
     >>> peace_data = Data().get_peace()
     >>> freedom = Data().get_freedom()
     >>> df_free_data = pd.concat([freedom['year'], freedom['countries'], freedom['hf_score']], axis=1)
     >>> df_free_data.columns = ['Year', 'Country', 'Human_Freedom_Score']
     >>> x_list_level24, y_list_level24, level24_list = analysis_two_fourth_level(peace_data, df_free_data)
-    >>> print(type(box_plot_level24(level_list24)))
+    >>> print(type(box_plot_level24(level24_list)))
     <class 'NoneType'>
     """
     fig, axes = plt.subplots(3, 2, figsize=(50,40))
@@ -1302,10 +1394,17 @@ def box_plot_level24(level_list24: list):
 
 def analysis_level45(inno_list: list, free_list: list):
     """
-
-    :param inno_list:
-    :param free_list:
-    :return:
+    This function is to analyze the forth and fifth levels of human needs' hierarchy. We choose the columns we want and
+    merge these together on the Country name. Then, we can get the data from lower level and higher level, two things here
+    are that we need to drop all the data points that contains Nan value in either
+    lower or higher level and then sorted the data in the order of small to large for the data of lower level. After this
+    process, the function should return all these two lists and one dataframe, shows correspondingly the data from lower
+    level, higher level and merged dataframe that can be used later. Because the original datasets only contains the data
+    from 2013 to 2016 in common, so we use the data from these 4 years.
+    :param inno_list: Preprocessed Innovation List
+    :param free_list: Preprocessed Freedom List
+    :return: all these three lists, shows correspondingly the data from lower level, higher level and list of
+    merged dataframe
 
     >>> free_list = prep_freedom()
     >>> inno_list = prep_innovation()
@@ -1339,10 +1438,12 @@ def analysis_level45(inno_list: list, free_list: list):
 
 def plot45(x_list: list, y_list: list):
     """
-
-    :param x_list:
-    :param y_list:
-    :return:
+    This function is to use the two lists of lower and higher level data we get before and plot a figure about their relationship
+    for all the countries in these two datasets. The figure should contain all the countries as corresponding data points.
+    So the trend should be harder to see.
+    :param x_list: List of the lower level sorted data
+    :param y_list: List of the higher level corresponding data
+    :return: A plt plot shows how the brief trend look like for all countries.
 
     >>> free_list = prep_freedom()
     >>> inno_list = prep_innovation()
@@ -1367,10 +1468,14 @@ def plot45(x_list: list, y_list: list):
 
 def plot45_cat(x_list: list, y_list: list):
     """
-
-    :param x_list:
-    :param y_list:
-    :return:
+    From previous plot, we can not see the trend and check if all kinds of countries satisfy this relationship.
+    So this function is used to categorize the lower level needs in different ranges. By using this way, we can smooth
+    the relationship and see the corresponding trend more clearly. After we've done with this process, we'll check if
+    the relationship we got can fit the model we proposed or not. Moreover, if the trend of this data plot is not clear
+    or didn't change a lot, we would go back and check if the dataset we used has deficiency and substitute with other datasets.
+    :param x_list: List of Lower Level Sorted data
+    :param y_list: List of corresponding higher level data
+    :return: plt plot shows how the categorized figure look like.
 
     >>> free_list = prep_freedom()
     >>> inno_list = prep_innovation()
@@ -1419,9 +1524,15 @@ def plot45_cat(x_list: list, y_list: list):
 
 def box_plot_45(level_45_list: list):
     """
-
-    :param level_45_list:
-    :return:
+    The last step of analysis in each step is to check if the results we got suits for all the kinds of countries, like
+    poor ones, developing ones and developed ondes. So in this function, we plotted the corresponding box plot to show the statistics information
+    of corresponding datasets and check if there are any outliers or if the data of each category is highly skewed. However,
+    due to the fact that the total countries' amount is not that huge, so for some categories in some analysis level,
+    the data can be highly skewed, or have outlier, or even just one or two data points.
+    Requirement:
+    import seaborn as sns
+    :param level_45_list: The list of merges dataframes
+    :return: the Box plot of all categories from lower level data
 
     >>> free_list = prep_freedom()
     >>> inno_list = prep_innovation()
@@ -1476,13 +1587,20 @@ def box_plot_45(level_45_list: list):
 
 def analysis_first_fourth_level(hunger: pd.DataFrame, df_free: pd.DataFrame):
     """
-
-    :param hunger:
-    :param df_free:
-    :return:
+    This function is to analyze the first and fourth levels of human needs' hierarchy. We choose the columns we want and
+    merge these together on the Country name. Then, we can get the data from lower level and higher level, two things here
+    are that we need to drop all the data points that contains Nan value in either
+    lower or higher level and then sorted the data in the order of small to large for the data of lower level. After this
+    process, the function should return all these two lists and one dataframe, shows correspondingly the data from lower
+    level, higher level and merged dataframe that can be used later. Because the original datasets only contains the data
+    from 2010 to 2016 in common, so we use the data from these 7 years.
+    :param hunger: World Hunger DataFrame
+    :param df_free: World freedom Index dataframe
+    :return: all these three lists, shows correspondingly the data from lower level, higher level and list of
+    merged dataframe
 
     >>> hunger_data = Data().get_hunger()
-    >>> freedom = Data.get_freedom()
+    >>> freedom = Data().get_freedom()
     >>> df_free_data = pd.concat([freedom['year'], freedom['countries'], freedom['hf_score']], axis=1)
     >>> df_free_data.columns = ['Year', 'Country', 'Human_Freedom_Score']
     >>> x_list_14, y_list_14, level14_list = analysis_first_fourth_level(hunger_data, df_free_data)
@@ -1522,16 +1640,18 @@ def analysis_first_fourth_level(hunger: pd.DataFrame, df_free: pd.DataFrame):
 
 def plot_14(x_list: list, y_list: list):
     """
-
-    :param x_list:
-    :param y_list:
-    :return:
+    This function is to use the two lists of lower and higher level data we get before and plot a figure about their relationship
+    for all the countries in these two datasets. The figure should contain all the countries as corresponding data points.
+    So the trend should be harder to see.
+    :param x_list: List of the lower level sorted data
+    :param y_list: List of the higher level corresponding data
+    :return: A plt plot shows how the brief trend look like for all countries.
 
     >>> hunger_data = Data().get_hunger()
-    >>> freedom = Data.get_freedom()
+    >>> freedom = Data().get_freedom()
     >>> df_free_data = pd.concat([freedom['year'], freedom['countries'], freedom['hf_score']], axis=1)
     >>> df_free_data.columns = ['Year', 'Country', 'Human_Freedom_Score']
-    >>> x_list_14, y_list_14, level14_list = analysis_happiness_Freedom_level(hunger_data, df_free_data)
+    >>> x_list_14, y_list_14, level14_list = analysis_first_fourth_level(hunger_data, df_free_data)
     >>> print(type(plot_14(x_list_14, y_list_14)))
     <class 'NoneType'>
     """
@@ -1557,16 +1677,20 @@ def plot_14(x_list: list, y_list: list):
 
 def plot_cat_level14(x_list: list, y_list: list):
     """
-
-    :param x_list:
-    :param y_list:
-    :return:
+    From previous plot, we can not see the trend and check if all kinds of countries satisfy this relationship.
+    So this function is used to categorize the lower level needs in different ranges. By using this way, we can smooth
+    the relationship and see the corresponding trend more clearly. After we've done with this process, we'll check if
+    the relationship we got can fit the model we proposed or not. Moreover, if the trend of this data plot is not clear
+    or didn't change a lot, we would go back and check if the dataset we used has deficiency and substitute with other datasets.
+    :param x_list: List of Lower Level Sorted data
+    :param y_list: List of corresponding higher level data
+    :return: plt plot shows how the categorized figure look like.
 
     >>> hunger_data = Data().get_hunger()
-    >>> freedom = Data.get_freedom()
+    >>> freedom = Data().get_freedom()
     >>> df_free_data = pd.concat([freedom['year'], freedom['countries'], freedom['hf_score']], axis=1)
     >>> df_free_data.columns = ['Year', 'Country', 'Human_Freedom_Score']
-    >>> x_list_14, y_list_14, level14_list = analysis_happiness_Freedom_level(hunger_data, df_free_data)
+    >>> x_list_14, y_list_14, level14_list = analysis_first_fourth_level(hunger_data, df_free_data)
     >>> print(type(plot_cat_level14(x_list_14, y_list_14)))
     <class 'NoneType'>
     """
@@ -1640,18 +1764,22 @@ def plot_cat_level14(x_list: list, y_list: list):
 
 def box_plot_level14(level14_list: list):
     """
-    
+   The last step of analysis in each step is to check if the results we got suits for all the kinds of countries, like
+    poor ones, developing ones and developed ondes. So in this function, we plotted the corresponding box plot to show the statistics information
+    of corresponding datasets and check if there are any outliers or if the data of each category is highly skewed. However,
+    due to the fact that the total countries' amount is not that huge, so for some categories in some analysis level,
+    the data can be highly skewed, or have outlier, or even just one or two data points.
     Required:
     import seaborn as sns
     
-    :param level14_list: 
-    :return:
+    :param level14_list: The list of merges dataframes
+    :return: the Box plot of all categories from lower level data
 
     >>> hunger_data = Data().get_hunger()
-    >>> freedom = Data.get_freedom()
+    >>> freedom = Data().get_freedom()
     >>> df_free_data = pd.concat([freedom['year'], freedom['countries'], freedom['hf_score']], axis=1)
     >>> df_free_data.columns = ['Year', 'Country', 'Human_Freedom_Score']
-    >>> x_list_14, y_list_14, level14_list = analysis_happiness_Freedom_level(hunger_data, df_free_data)
+    >>> x_list_14, y_list_14, level14_list = analysis_first_fourth_level(hunger_data, df_free_data)
     >>> print(type(box_plot_level14(level14_list)))
     <class 'NoneType'>
     """
@@ -1704,12 +1832,19 @@ def box_plot_level14(level14_list: list):
 
 def analysis_level15(hunger: list, inno_list: list):
     """
+    This function is to analyze the first and fifth levels of human needs' hierarchy. We choose the columns we want and
+    merge these together on the Country name. Then, we can get the data from lower level and higher level, two things here
+    are that we need to drop all the data points that contains Nan value in either
+    lower or higher level and then sorted the data in the order of small to large for the data of lower level. After this
+    process, the function should return all these two lists and one dataframe, shows correspondingly the data from lower
+    level, higher level and merged dataframe that can be used later. Because the original datasets only contains the data
+    from 2013 to 2016 in common, so we use the data from these 4 years.
+    :param hunger: World Hunger DataFrame
+    :param inno_list: Preprocessed World Innovation List
+    :return: all these three lists, shows correspondingly the data from lower level, higher level and list of
+    merged dataframe
 
-    :param hunger:
-    :param inno_list:
-    :return:
-
-    >>> hunger_data = Data.get_hunger()
+    >>> hunger_data = Data().get_hunger()
     >>> inno_list = prep_innovation()
     >>> x_list_15, y_list_15, level_15_list = analysis_level15(hunger_data, inno_list)
     >>> print(type(x_list_15))
@@ -1746,12 +1881,14 @@ def analysis_level15(hunger: list, inno_list: list):
 
 def plot_15(x_list: list, y_list: list):
     """
+    This function is to use the two lists of lower and higher level data we get before and plot a figure about their relationship
+    for all the countries in these two datasets. The figure should contain all the countries as corresponding data points.
+    So the trend should be harder to see.
+    :param x_list: List of the lower level sorted data
+    :param y_list: List of the higher level corresponding data
+    :return: A plt plot shows how the brief trend look like for all countries.
 
-    :param x_list:
-    :param y_list:
-    :return:
-
-    >>> hunger_data = Data.get_hunger()
+    >>> hunger_data = Data().get_hunger()
     >>> inno_list = prep_innovation()
     >>> x_list_15, y_list_15, level_15_list = analysis_level15(hunger_data, inno_list)
     >>> print(type(plot_15(x_list_15, y_list_15)))
@@ -1777,12 +1914,16 @@ def plot_15(x_list: list, y_list: list):
 
 def plot_cat_level15(x_list: list, y_list: list):
     """
+    From previous plot, we can not see the trend and check if all kinds of countries satisfy this relationship.
+    So this function is used to categorize the lower level needs in different ranges. By using this way, we can smooth
+    the relationship and see the corresponding trend more clearly. After we've done with this process, we'll check if
+    the relationship we got can fit the model we proposed or not. Moreover, if the trend of this data plot is not clear
+    or didn't change a lot, we would go back and check if the dataset we used has deficiency and substitute with other datasets.
+    :param x_list: List of Lower Level Sorted data
+    :param y_list: List of corresponding higher level data
+    :return: plt plot shows how the categorized figure look like.
 
-    :param x_list:
-    :param y_list:
-    :return:
-
-    >>> hunger_data = Data.get_hunger()
+    >>> hunger_data = Data().get_hunger()
     >>> inno_list = prep_innovation()
     >>> x_list_15, y_list_15, level_15_list = analysis_level15(hunger_data, inno_list)
     >>> print(type(plot_cat_level15(x_list_15, y_list_15)))
@@ -1856,14 +1997,18 @@ def plot_cat_level15(x_list: list, y_list: list):
 
 def box_plot_level15(level_15_list: list):
     """
-
-    Required:
+    The last step of analysis in each step is to check if the results we got suits for all the kinds of countries, like
+    poor ones, developing ones and developed ondes. So in this function, we plotted the corresponding box plot to show the statistics information
+    of corresponding datasets and check if there are any outliers or if the data of each category is highly skewed. However,
+    due to the fact that the total countries' amount is not that huge, so for some categories in some analysis level,
+    the data can be highly skewed, or have outlier, or even just one or two data points.
+    Requirement:
     import seaborn as sns
 
-    :param level_15_list:
-    :return:
+    :param level_15_list: The list of merges dataframes
+    :return: the Box plot of all categories from lower level data
 
-    >>> hunger_data = Data.get_hunger()
+    >>> hunger_data = Data().get_hunger()
     >>> inno_list = prep_innovation()
     >>> x_list_15, y_list_15, level_15_list = analysis_level15(hunger_data, inno_list)
     >>> print(type(box_plot_level15(level_15_list)))
