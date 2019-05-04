@@ -1,6 +1,6 @@
 # World-living-quality-analysis
 # Proposal (Final report is attached below)
-### The final version of code is in master branch
+### The final version of code is in master branch and the coverage is 91% for functions and 100% for main
 ### Title:
 Make Maslow Great Again ...or not
 ——A Statistical Methodology/Model/Proof/Falsification of Maslow's Pyramid
