@@ -917,6 +917,22 @@ def analysis_happiness_Freedom_level(happiness: pd.DataFrame, df_free: pd.DataFr
 
 
 def plot_level_h_f(x_list: list, y_list: list):
+    """
+
+    :param x_list:
+    :param y_list:
+    :return:
+
+    >>> happiness = Data().get_happiness()
+    >>> happiness['2017.csv'] = happiness['2017.csv'][['Country', 'Happiness.Score']]
+    >>> happiness['2017.csv'].columns = ['Country', 'Happiness Score']
+    >>> freedom = Data().get_freedom()
+    >>> df_free_data = pd.concat([freedom['year'], freedom['countries'], freedom['hf_score']], axis=1)
+    >>> df_free_data.columns = ['Year', 'Country', 'Human_Freedom_Score']
+    >>> x_list_h_f, y_list_h_f, h_f_list = analysis_happiness_Freedom_level(happiness, df_free_data)
+    >>> print(type(plot_level_h_f(x_list_h_f, y_list_h_f)))
+    <class 'NoneType'>
+    """
     plt.figure(figsize = (30,15), dpi=100)
     marker = ['.','*','>','<','1','2','s','3','4']
     color = ['#E11B00', '#1E90FF','#7EFF33','#33F4FF','#D433FF','#3351FF','#D433FF']
@@ -932,6 +948,21 @@ def plot_level_h_f(x_list: list, y_list: list):
 
 
 def plot_cat_hf(x_list: list, y_list: list):
+    """
+
+    :param x_list:
+    :param y_list:
+    :return:
+    >>> happiness = Data().get_happiness()
+    >>> happiness['2017.csv'] = happiness['2017.csv'][['Country', 'Happiness.Score']]
+    >>> happiness['2017.csv'].columns = ['Country', 'Happiness Score']
+    >>> freedom = Data().get_freedom()
+    >>> df_free_data = pd.concat([freedom['year'], freedom['countries'], freedom['hf_score']], axis=1)
+    >>> df_free_data.columns = ['Year', 'Country', 'Human_Freedom_Score']
+    >>> x_list_h_f, y_list_h_f, h_f_list = analysis_happiness_Freedom_level(happiness, df_free_data)
+    >>> print(type(plot_cat_hf(x_list_h_f, y_list_h_f)))
+    <class 'NoneType'>
+    """
     plt.figure(figsize = (30,20), dpi=100)
     x_item = ['[2.5,3)','[3,3.5)','[3.5,4)','[4,4.5)','[4.5,5)','[5,5.5)',
               '[5.5,6)','[6,6.5)','[6.5,7)','7+']
@@ -999,7 +1030,17 @@ def box_plot_level_hf(h_f_list: list):
     import seaborn as sns
     
     :param h_f_list: 
-    :return: 
+    :return:
+
+    >>> happiness = Data().get_happiness()
+    >>> happiness['2017.csv'] = happiness['2017.csv'][['Country', 'Happiness.Score']]
+    >>> happiness['2017.csv'].columns = ['Country', 'Happiness Score']
+    >>> freedom = Data().get_freedom()
+    >>> df_free_data = pd.concat([freedom['year'], freedom['countries'], freedom['hf_score']], axis=1)
+    >>> df_free_data.columns = ['Year', 'Country', 'Human_Freedom_Score']
+    >>> x_list_h_f, y_list_h_f, h_f_list = analysis_happiness_Freedom_level(happiness, df_free_data)
+    >>> print(type(box_plot_level_hf(h_f_list)))
+    <class 'NoneType'>
     
     """
     fig, axes = plt.subplots(2,1, figsize=(50,40))
@@ -1046,6 +1087,20 @@ def box_plot_level_hf(h_f_list: list):
 
 
 def analysis_two_fourth_level(peace: pd.DataFrame, df_free: pd.DataFrame):
+    """
+
+    :param peace:
+    :param df_free:
+    :return:
+
+    >>> peace_data = Data().get_peace()
+    >>> freedom = Data().get_freedom()
+    >>> df_free_data = pd.concat([freedom['year'], freedom['countries'], freedom['hf_score']], axis=1)
+    >>> df_free_data.columns = ['Year', 'Country', 'Human_Freedom_Score']
+    >>> x_list_level24, y_list_level24, level24_list = analysis_two_fourth_level(peace_data, df_free_data)
+    >>> type(x_list_level24)
+    <class 'list'>
+    """
     level24_list = []
     for i in range(6):
         df = df_free[df_free['Year']==(2010+i)]
@@ -1076,6 +1131,20 @@ def analysis_two_fourth_level(peace: pd.DataFrame, df_free: pd.DataFrame):
 
 
 def plot_level_24(x_list: list, y_list: list):
+    """
+
+    :param x_list:
+    :param y_list:
+    :return:
+
+    >>> peace_data = Data().get_peace()
+    >>> freedom = Data().get_freedom()
+    >>> df_free_data = pd.concat([freedom['year'], freedom['countries'], freedom['hf_score']], axis=1)
+    >>> df_free_data.columns = ['Year', 'Country', 'Human_Freedom_Score']
+    >>> x_list_level24, y_list_level24, level24_list = analysis_two_fourth_level(peace_data, df_free_data)
+    >>> print(type(plot_level_24(x_list_level24, y_list_level24)))
+    <class 'NoneType'>
+    """
     plt.figure(figsize = (30,15), dpi=100)
     marker = ['.','*','>','<','1','2','s']
     color = ['#E11B00', '#1E90FF','#FF4233','#FFE333','#7EFF33','#33F4FF','#D433FF']
@@ -1095,6 +1164,20 @@ def plot_level_24(x_list: list, y_list: list):
 
 
 def plot_cat24(x_list: list, y_list: list):
+    """
+
+    :param x_list:
+    :param y_list:
+    :return:
+
+    >>> peace_data = Data().get_peace()
+    >>> freedom = Data().get_freedom()
+    >>> df_free_data = pd.concat([freedom['year'], freedom['countries'], freedom['hf_score']], axis=1)
+    >>> df_free_data.columns = ['Year', 'Country', 'Human_Freedom_Score']
+    >>> x_list_level24, y_list_level24, level24_list = analysis_two_fourth_level(peace_data, df_free_data)
+    >>> print(type(plot_cat24(x_list_level24, y_list_level24)))
+    <class 'NoneType'>
+    """
     plt.figure(figsize = (30,20), dpi=100)
     pi_list = ['pi_2010','pi_2011','pi_2012','pi_2013','pi_2014','pi_2015','pi_2016']
     x_item = ['[1,1.25)','[1.25,1.5)','[1.5,1.75)','[1.75,2)','[2,2.25)','[2.25,2.5)',
@@ -1161,7 +1244,15 @@ def box_plot_level24(level_list24: list):
     import seaborn as sns
     
     :param level_list24: 
-    :return: 
+    :return:
+
+    >>> peace_data = Data().get_peace()
+    >>> freedom = Data().get_freedom()
+    >>> df_free_data = pd.concat([freedom['year'], freedom['countries'], freedom['hf_score']], axis=1)
+    >>> df_free_data.columns = ['Year', 'Country', 'Human_Freedom_Score']
+    >>> x_list_level24, y_list_level24, level24_list = analysis_two_fourth_level(peace_data, df_free_data)
+    >>> print(type(box_plot_level24(level_list24)))
+    <class 'NoneType'>
     """
     fig, axes = plt.subplots(3, 2, figsize=(50,40))
     item = [['Human_Freedom_Score','pi_2010'],['Human_Freedom_Score','pi_2011'],
@@ -1210,6 +1301,18 @@ def box_plot_level24(level_list24: list):
 
 
 def analysis_level45(inno_list: list, free_list: list):
+    """
+
+    :param inno_list:
+    :param free_list:
+    :return:
+
+    >>> free_list = prep_freedom()
+    >>> inno_list = prep_innovation()
+    >>> x_list_45, y_list_45, level_45_list = analysis_level45(inno_list, free_list)
+    >>> print(type(x_list_45))
+    <class 'list'>
+    """
     level_45_list = []
     for i in range(4):
         df_level45 = pd.merge(inno_list[i], free_list[i], on = 'Country', how='inner')
@@ -1235,6 +1338,18 @@ def analysis_level45(inno_list: list, free_list: list):
 
 
 def plot45(x_list: list, y_list: list):
+    """
+
+    :param x_list:
+    :param y_list:
+    :return:
+
+    >>> free_list = prep_freedom()
+    >>> inno_list = prep_innovation()
+    >>> x_list_45, y_list_45, level_45_list = analysis_level45(inno_list, free_list)
+    >>> print(type(plot45(x_list_45, y_list_45)))
+    <class 'NoneType'>
+    """
     plt.figure(figsize = (30,15), dpi=100)
     item = ['Score2013', 'Score2014', 'Score2015', 'Score2016']
     marker = ['.','*','>','<','1','2','s']
@@ -1251,6 +1366,18 @@ def plot45(x_list: list, y_list: list):
 
 
 def plot45_cat(x_list: list, y_list: list):
+    """
+
+    :param x_list:
+    :param y_list:
+    :return:
+
+    >>> free_list = prep_freedom()
+    >>> inno_list = prep_innovation()
+    >>> x_list_45, y_list_45, level_45_list = analysis_level45(inno_list, free_list)
+    >>> print(type(plot45_cat(x_list_45, y_list_45)))
+    <class 'NoneType'>
+    """
     plt.figure(figsize = (30,20), dpi=100)
     item = ['Score2013', 'Score2014', 'Score2015', 'Score2016']
     start = 4.5
@@ -1291,6 +1418,17 @@ def plot45_cat(x_list: list, y_list: list):
 
 
 def box_plot_45(level_45_list: list):
+    """
+
+    :param level_45_list:
+    :return:
+
+    >>> free_list = prep_freedom()
+    >>> inno_list = prep_innovation()
+    >>> x_list_45, y_list_45, level_45_list = analysis_level45(inno_list, free_list)
+    >>> print(type(box_plot_45(level_45_list)))
+    <class 'NoneType'>
+    """
     fig, axes = plt.subplots(2, 2, figsize=(50,40))
     item = [['hf_score','Score2013'], ['hf_score','Score2014'], ['hf_score','Score2015'], ['hf_score','Score2016']]
     free_item = 'Human_Freedom_Score'
@@ -1337,6 +1475,20 @@ def box_plot_45(level_45_list: list):
 
 
 def analysis_first_fourth_level(hunger: pd.DataFrame, df_free: pd.DataFrame):
+    """
+
+    :param hunger:
+    :param df_free:
+    :return:
+
+    >>> hunger_data = Data().get_hunger()
+    >>> freedom = Data.get_freedom()
+    >>> df_free_data = pd.concat([freedom['year'], freedom['countries'], freedom['hf_score']], axis=1)
+    >>> df_free_data.columns = ['Year', 'Country', 'Human_Freedom_Score']
+    >>> x_list_14, y_list_14, level14_list = analysis_first_fourth_level(hunger_data, df_free_data)
+    >>> print(type(x_list_14))
+    <class 'list'>
+    """
     level14_list = []
     for i in range(7):
         df = df_free[df_free['Year']==(2010+i)]
@@ -1369,6 +1521,20 @@ def analysis_first_fourth_level(hunger: pd.DataFrame, df_free: pd.DataFrame):
 
 
 def plot_14(x_list: list, y_list: list):
+    """
+
+    :param x_list:
+    :param y_list:
+    :return:
+
+    >>> hunger_data = Data().get_hunger()
+    >>> freedom = Data.get_freedom()
+    >>> df_free_data = pd.concat([freedom['year'], freedom['countries'], freedom['hf_score']], axis=1)
+    >>> df_free_data.columns = ['Year', 'Country', 'Human_Freedom_Score']
+    >>> x_list_14, y_list_14, level14_list = analysis_happiness_Freedom_level(hunger_data, df_free_data)
+    >>> print(type(plot_14(x_list_14, y_list_14)))
+    <class 'NoneType'>
+    """
     plt.figure(figsize = (30,15), dpi=100)
     item = [['undernourishment_rate_2010','Human_Freedom_Score'],['undernourishment_rate_2011','Human_Freedom_Score'],
             ['undernourishment_rate_2012','Human_Freedom_Score'],['undernourishment_rate_2013','Human_Freedom_Score'],
@@ -1390,6 +1556,20 @@ def plot_14(x_list: list, y_list: list):
 
 
 def plot_cat_level14(x_list: list, y_list: list):
+    """
+
+    :param x_list:
+    :param y_list:
+    :return:
+
+    >>> hunger_data = Data().get_hunger()
+    >>> freedom = Data.get_freedom()
+    >>> df_free_data = pd.concat([freedom['year'], freedom['countries'], freedom['hf_score']], axis=1)
+    >>> df_free_data.columns = ['Year', 'Country', 'Human_Freedom_Score']
+    >>> x_list_14, y_list_14, level14_list = analysis_happiness_Freedom_level(hunger_data, df_free_data)
+    >>> print(type(plot_cat_level14(x_list_14, y_list_14)))
+    <class 'NoneType'>
+    """
     plt.figure(figsize = (30,20), dpi=100)
     item = [['undernourishment_rate_2010','Human_Freedom_Score'],['undernourishment_rate_2011','Human_Freedom_Score'],
             ['undernourishment_rate_2012','Human_Freedom_Score'],['undernourishment_rate_2013','Human_Freedom_Score'],
@@ -1465,7 +1645,15 @@ def box_plot_level14(level14_list: list):
     import seaborn as sns
     
     :param level14_list: 
-    :return: 
+    :return:
+
+    >>> hunger_data = Data().get_hunger()
+    >>> freedom = Data.get_freedom()
+    >>> df_free_data = pd.concat([freedom['year'], freedom['countries'], freedom['hf_score']], axis=1)
+    >>> df_free_data.columns = ['Year', 'Country', 'Human_Freedom_Score']
+    >>> x_list_14, y_list_14, level14_list = analysis_happiness_Freedom_level(hunger_data, df_free_data)
+    >>> print(type(box_plot_level14(level14_list)))
+    <class 'NoneType'>
     """
     fig, axes = plt.subplots(3, 3, figsize=(60,40))
     item = [['undernourishment_rate_2010','Human_Freedom_Score'],['undernourishment_rate_2011','Human_Freedom_Score'],
@@ -1515,6 +1703,18 @@ def box_plot_level14(level14_list: list):
 
 
 def analysis_level15(hunger: list, inno_list: list):
+    """
+
+    :param hunger:
+    :param inno_list:
+    :return:
+
+    >>> hunger_data = Data.get_hunger()
+    >>> inno_list = prep_innovation()
+    >>> x_list_15, y_list_15, level_15_list = analysis_level15(hunger_data, inno_list)
+    >>> print(type(x_list_15))
+    <class 'list'>
+    """
     level_15_list = []
     for i in range(4):
         string = 'undernourishment_rate_'+str(2013+i)
@@ -1545,6 +1745,18 @@ def analysis_level15(hunger: list, inno_list: list):
 
 
 def plot_15(x_list: list, y_list: list):
+    """
+
+    :param x_list:
+    :param y_list:
+    :return:
+
+    >>> hunger_data = Data.get_hunger()
+    >>> inno_list = prep_innovation()
+    >>> x_list_15, y_list_15, level_15_list = analysis_level15(hunger_data, inno_list)
+    >>> print(type(plot_15(x_list_15, y_list_15)))
+    <class 'NoneType'>
+    """
     plt.figure(figsize = (30,15), dpi=100)
     item = [['undernourishment_rate_2013','Score2013'], ['undernourishment_rate_2014','Score2014'],
             ['undernourishment_rate_2015','Score2015'], ['undernourishment_rate_2016','Score2016']]
@@ -1564,6 +1776,18 @@ def plot_15(x_list: list, y_list: list):
 
 
 def plot_cat_level15(x_list: list, y_list: list):
+    """
+
+    :param x_list:
+    :param y_list:
+    :return:
+
+    >>> hunger_data = Data.get_hunger()
+    >>> inno_list = prep_innovation()
+    >>> x_list_15, y_list_15, level_15_list = analysis_level15(hunger_data, inno_list)
+    >>> print(type(plot_cat_level15(x_list_15, y_list_15)))
+    <class 'NoneType'>
+    """
     plt.figure(figsize = (30,20), dpi=100)
     item = [['undernourishment_rate_2013','Score2013'], ['undernourishment_rate_2014','Score2014'],
             ['undernourishment_rate_2015','Score2015'], ['undernourishment_rate_2016','Score2016']]
@@ -1638,6 +1862,12 @@ def box_plot_level15(level_15_list: list):
 
     :param level_15_list:
     :return:
+
+    >>> hunger_data = Data.get_hunger()
+    >>> inno_list = prep_innovation()
+    >>> x_list_15, y_list_15, level_15_list = analysis_level15(hunger_data, inno_list)
+    >>> print(type(box_plot_level15(level_15_list)))
+    <class 'NoneType'>
     """
     fig, axes = plt.subplots(2, 2, figsize=(60,40))
     item = [['undernourishment_rate_2013','Score2013'], ['undernourishment_rate_2014','Score2014'],
